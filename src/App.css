@@ -1,38 +1,338 @@
-.App {
-  text-align: center;
+/*------------ [_Root] -------FFC368----*/
+:root {
+
+  /* Colors */
+  --bodyTxt-color: #8B949E;
+  --headTxt-color: #F0F6FC;
+  --headTxt-color: #C9D1D9;
+  --blueTxt-color: #58A6FF;
+  --bodyBg-color: #0d1117;
+  --headerBg-color: #161B22;
+  --greenBg-color: #238636;
+  --blueBg-color: #388BFD26;
+  --starBg-color: #E3B341;
+  --htmlBg-color: #E34C26;
+  --htmlBg-color: #563D7C;
+  --javascriptBg-color: #F1E05A;
+  --typescriptBg-color: #2B7489;
+
+
+  /* FontStyle*/
+  --font: 'Segoe UI';
+  
+
+  /* Font Sizes */
+  --font-thirtyTwo: 1.35rem;
+  --font-twentyFour: 1.25rem;
+  --font-eighteen: 1.125rem;
+  --font-sixteen: .8725rem;
+  --font-fourteen: .88rem;
+  --font-twelve: .75rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media screen and (min-width:900px) {
+    :root {
+        --font-twohun: 16rem;
+        --font-thirtyTwo: 2rem;
+        --font-twentyFour: 1.5rem;
+        --font-eighteen: 1.25rem;
+        --font-sixteen: 1rem;
+        --font-fourteen: .88rem;
+        --font-twelve: .75rem;
+    }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*========================================*/
+/*------------ [_Reset_Styles] -----------*/
+/*========================================*/
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('../src/assets/Segoe-UI-Font/SegoeUI.woff2') format('woff2'),
+         url('../src/assets/Segoe-UI-Font/SegoeUI.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/*========================================*/
+/*--------------- [_Utility] -------------*/
+/*========================================*/
+body {
+    max-width: 2560px;
+    height: 100vh;
+    background-color: var(--black-color);
+    font-family: var(--font);
+    color: var(--white-color);
+    letter-spacing: 1px;
+}
+
+p, h1, h2, h3,
+h4, h5, h6{
+    padding: 0;
+    margin: 0;
+}
+
+h2, h3,
+h4, h5, h6 {
+    color: var(--head-pri-color);
+    font-family: var(--font);
+}
+
+p {
+    font-size: var(--font-fourteen);
+    line-height: 1.5rem;
+    color: var(--text-pri-color);
+}
+
+h1 {
+    font-size: var(--font-twohun);
+    /* line-height: 6rem; */
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: var(--font-thirtyTwo);
+    line-height: 2rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: var(--font-eighteen);
+    line-height: 2rem;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: var(--font-sixteen);
+    line-height: 1.5rem;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: var(--font-twelve);
+    font-weight: 600;
+    line-height: 1.5rem;
+}
+
+h6 {
+    font-size: 12px;
+    line-height: 1.2rem;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-family: var(--font);
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  border: none;
+  max-width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+/*--------------- [Body Wrapper] -------------*/
+.bodyWrapper{
+  display: grid;
+  grid-template-columns: 100%;
+  overflow: hidden;
+  /* gap: 2rem; */
+  /* max-width: 2560px; */
+}
+
+/*--------------- [_Header] -------------*/
+
+.navHeader{
+  background-color: transparent;
   display: flex;
-  flex-direction: column;
+  padding: 2rem 2rem 1rem;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  z-index: 2;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.desktopDisplay{
+    display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mobileMenu{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    box-shadow: 0px 5px 30px 0px rgb(37 37 37);
+    -webkit-box-shadow: 0px 5px 30px 0px rgb(37 37 37);
+    -moz-box-shadow: 0px 5px 30px 0px rgb(37 37 37);
+    font-size: var(--font-eighteen);
+    transform: translateX(0%);
+    -webkit-transition: .5s;
+    transition: .5s;
+    justify-content: space-between;
+    color: var(--white-color);
+    background: var(--black-color);
 }
+
+.active{
+    transform: translate3d(-70%, 0, 0);
+	animation-timing-function: 1s ease-in;
+}
+
+.mobileLogo{
+  width: 30px;
+}
+
+.navToggle{
+    cursor: pointer;
+}
+
+.bar{
+    width: 25px;
+    height: 3px;
+    margin: 4px;
+    background: var(--white-color);
+    transition: .4s;
+}
+
+.bTwo{
+    width: 1rem;
+    transform: translateX(8px);
+}
+
+.change .bar{
+    display: block;
+    background: var(--white-color);
+    cursor: pointer;
+}
+
+.change .bOne{ 
+    transform: translateY(5px) rotate(45deg);
+}
+
+.change .bTwo{
+    opacity: 0;
+}
+
+.change .bThree{
+    transform: translateY(-8.75px) rotate(-45deg);
+}
+
+.mobileDisplay .navItems{
+    margin: 2rem 2rem 0;
+}
+
+.navList{
+    padding: 2rem 0;
+    font-weight: 500;
+}
+
+.navLink{
+    text-transform: uppercase;
+    color: var(--white-color);
+}
+
+.mobileDisplay .navLink:hover, .mobileDisplay .navLink:focus{
+    color: var(--blue-color);
+    transition: .3s ease-in-out;
+    border-bottom: 2px solid var(--blue-color);
+}
+
+.navFooter{
+    margin: 1rem 2rem 2rem;
+}
+
+.navSocialLinks{
+    display: flex;
+    font-size: var(--font-fourteen);
+    justify-content: space-between;
+}
+
+.copyrightWhite p{
+    font-size: var(--font-twelve);
+    color: var(--white-color);
+    margin-top: 2rem;
+}
+
+@media screen and (min-width: 500px) {
+    .navSocialLinks{
+        width: 55%;
+    }
+}
+
+@media screen and (min-width: 900px){
+  .mobileDisplay{
+    display: none; 
+  }
+
+  .desktopDisplay{
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    padding: 2rem 2rem;
+    width: 100%;
+  }
+
+  .navItems{
+      display: flex;
+  }
+
+  .navList{
+      padding: 0 2rem;
+  }
+
+  .navLink{
+      font-size: var(--font-fourteen);
+  }
+
+  .desktopDisplay .navLink:hover, .desktopDisplay .navLink:active{
+      color: var(--blue-color);
+      transition: .3s ease-in-out;
+      border-bottom: 2px solid var(--blue-color);
+  }
+
+  .navRight{
+      font-weight: 500;
+  }
+
+}
+
+@media screen and (min-width: 1040px){
+    .navLink{
+        font-size: var(--font-eighteen);
+    }
+}
+
+@media screen and (min-width: 1023px) {
+    h1{
+        font-size: 15rem;
+    }
+}
+
+
+
