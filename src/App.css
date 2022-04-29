@@ -1,9 +1,9 @@
-/*------------ [_Root] -------FFC368----*/
+/*------------ [_Root] -----------*/
 :root {
 
   /* Colors */
   --bodyTxt-color: #8B949E;
-  --headTxt-color: #F0F6FC;
+  /* --headTxt-color: #F0F6FC; */
   --headTxt-color: #C9D1D9;
   --blueTxt-color: #58A6FF;
   --bodyBg-color: #0d1117;
@@ -24,7 +24,7 @@
   /* Font Sizes */
   --font-thirtyTwo: 1.35rem;
   --font-twentyFour: 1.25rem;
-  --font-eighteen: 1.125rem;
+  --font-twenty: 1.2rem;
   --font-sixteen: .8725rem;
   --font-fourteen: .88rem;
   --font-twelve: .75rem;
@@ -32,10 +32,9 @@
 
 @media screen and (min-width:900px) {
     :root {
-        --font-twohun: 16rem;
         --font-thirtyTwo: 2rem;
         --font-twentyFour: 1.5rem;
-        --font-eighteen: 1.25rem;
+        --font-twenty: 1.25rem;
         --font-sixteen: 1rem;
         --font-fourteen: .88rem;
         --font-twelve: .75rem;
@@ -73,10 +72,10 @@ html {
 body {
     max-width: 2560px;
     height: 100vh;
-    background-color: var(--black-color);
+    background-color: var(--bodyBg-color);
     font-family: var(--font);
-    color: var(--white-color);
-    letter-spacing: 1px;
+    color: var(--bodyTxt-color);
+    letter-spacing: -0.5px;
 }
 
 p, h1, h2, h3,
@@ -98,20 +97,20 @@ p {
 }
 
 h1 {
-    font-size: var(--font-twohun);
+    font-size: var(--font-thirtyTwo);
     /* line-height: 6rem; */
     font-weight: 500;
     letter-spacing: 1px;
 }
 
 h2 {
-    font-size: var(--font-thirtyTwo);
+    font-size: var(--font-twentyFour);
     line-height: 2rem;
     font-weight: 700;
 }
 
 h3 {
-    font-size: var(--font-eighteen);
+    font-size: var(--font-twenty);
     line-height: 2rem;
     font-weight: 600;
 }
@@ -156,8 +155,6 @@ img {
   display: grid;
   grid-template-columns: 100%;
   overflow: hidden;
-  /* gap: 2rem; */
-  /* max-width: 2560px; */
 }
 
 /*--------------- [_Header] -------------*/

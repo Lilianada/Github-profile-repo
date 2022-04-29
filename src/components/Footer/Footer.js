@@ -11,15 +11,14 @@ import { Copyright,
 export default function Footer () {
         return(
             <FooterSection>
-                <FooterBottom>
-                    <FooterLinks>
-                        <FooterSocial href="#" ><BsLinkedin/></FooterSocial>
-                        <FooterSocial href="#" ><BsInstagram/></FooterSocial>
-                        <FooterSocial href="#" ><BsTwitter/></FooterSocial>
-                    </FooterLinks>
-                    <Copyright><p>© 2022 <strong>cloudnimi</strong> by <a href="#">Designsbylilian</a>. All rights reserved.</p></Copyright>
-                </FooterBottom>
+                 
             </FooterSection>
         )
 }
 
+<ul class="list-style-none d-flex flex-justify-center">
+        <li class="mr-3"><a href="/site/terms" data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to terms&quot;,&quot;label&quot;:&quot;text:terms&quot;}">Terms</a></li>
+        <li class="mr-3"><a href="/site/privacy" data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to privacy&quot;,&quot;label&quot;:&quot;text:privacy&quot;}">Privacy</a></li>
+        <li class="mr-3"><a href="https://docs.github.com/articles/github-security/" data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to security&quot;,&quot;label&quot;:&quot;text:security&quot;}">Security</a></li>
+          <li><a class="Link--secondary" data-ga-click="Footer, go to contact, text:contact" href="https://github.com/contact">Contact GitHub</a></li>
+    </ul>
