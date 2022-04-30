@@ -189,8 +189,8 @@ img {
     -webkit-transition: .5s;
     transition: .5s;
     justify-content: space-between;
-    color: var(--white-color);
-    background: var(--black-color);
+    color: var(--headTxt-color);
+    background: var(--headerBg-color);
 }
 
 .active{
@@ -210,7 +210,7 @@ img {
     width: 25px;
     height: 3px;
     margin: 4px;
-    background: var(--white-color);
+    background: var(--headTxt-color);
     transition: .4s;
 }
 
@@ -221,7 +221,7 @@ img {
 
 .change .bar{
     display: block;
-    background: var(--white-color);
+    background: var(--headTxt-color);
     cursor: pointer;
 }
 
@@ -248,13 +248,12 @@ img {
 
 .navLink{
     text-transform: uppercase;
-    color: var(--white-color);
+    color: var(--headTxt-color);
 }
 
 .mobileDisplay .navLink:hover, .mobileDisplay .navLink:focus{
-    color: var(--blue-color);
+    color: var(--bodyTxt-color);
     transition: .3s ease-in-out;
-    border-bottom: 2px solid var(--blue-color);
 }
 
 .navFooter{
@@ -269,7 +268,7 @@ img {
 
 .copyrightWhite p{
     font-size: var(--font-twelve);
-    color: var(--white-color);
+    color: var(--headTxt-color);
     margin-top: 2rem;
 }
 
@@ -310,7 +309,7 @@ img {
   .desktopDisplay .navLink:hover, .desktopDisplay .navLink:active{
       color: var(--blue-color);
       transition: .3s ease-in-out;
-      border-bottom: 2px solid var(--blue-color);
+      border-bottom: 2px solid var(--bodyTxt-color);
   }
 
   .navRight{

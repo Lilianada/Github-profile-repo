@@ -63,7 +63,7 @@ const Input = styled.input`
     letter-spacing: normal;
 
     & :hover, :focus{
-    outline: var(--blueTxt-color) 1.5px solid;
+        outline: var(--blueTxt-color) 1.5px solid;
     }
 `
 
@@ -73,13 +73,17 @@ const Button = styled.button`
     font-weight: 600;
     font-family: var(--font);
     padding: .35rem;
-    border: none;
+    border: 1px solid #249e3b;
     border-radius: 3px;
     outline: none;
     cursor: pointer;
     transition: all .3s;
     color: #F0F6FC;
     margin-bottom: .5rem;
+
+    & :hover, :focus{
+        background: #249e3b;
+    }
 `
 
 const Footer = styled.footer`

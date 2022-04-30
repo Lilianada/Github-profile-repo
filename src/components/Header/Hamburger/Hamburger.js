@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useState } from 'react'
-import {BsLinkedin, BsInstagram, BsTwitter} from 'react-icons/bs'
-import { NavLink } from 'react-router-dom';import Logo from '../../../assets/Logos/Logo.svg';
+import {BsLinkedin, BsInstagram, BsTwitter, BsGithub} from 'react-icons/bs'
+import { NavLink } from 'react-router-dom';
 import { NavHashLink  } from 'react-router-hash-link';
 // import { motion } from 'framer-motion';
 
 const NavLogo = styled.div`
-    width: 65px;
+    
 `
 
 export default function Hamburger (){
@@ -22,7 +22,7 @@ export default function Hamburger (){
   return(
     <div className="mobileDisplay">
         <div className="navHeader">
-            <NavHashLink smooth to="/" className="mobileLogo"><NavLogo><img src={Logo} alt="Logo" /></NavLogo></NavHashLink>
+            <NavHashLink smooth to="/" className="mobileLogo"><NavLogo><BsGithub size={48} fill='#F0F6FC' /></NavLogo></NavHashLink>
             <div className={toggle ? "change" : "navToggle"} onClick = {()=> setToggle(!toggle)}>
                 <div className="bar bOne" >{toggle}</div>
                 <div className="bar bTwo"></div>
@@ -39,7 +39,7 @@ export default function Hamburger (){
                 >
                     <li className="navList" onClick={CloseMenu}>
                         <NavLink to="/" className="navLink">
-                            <a href="/" className="mobileLogo"><NavLogo><img src={Logo} /></NavLogo></a>    
+                            <a href="/" className="mobileLogo"><NavLogo><BsGithub size={48} fill='#F0F6FC' /></NavLogo></a>    
                         </NavLink>
                     </li>
                     <li className="navList" onClick={CloseMenu}><NavHashLink smooth to="/#what-we-do" className="navLink">What we do</NavHashLink></li>
