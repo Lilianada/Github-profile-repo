@@ -8,7 +8,8 @@ const Wrapper = styled.main`
 export default function RepositoryPage () {
     return(
         <Wrapper>
-            <Header/>
+            <Header/> 
+            
         </Wrapper>
     )
 }

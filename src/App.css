@@ -3,7 +3,7 @@
 
   /* Colors */
   --bodyTxt-color: #8B949E;
-  /* --headTxt-color: #F0F6FC; */
+  --headerTxt-color: #F0F6FC;
   --headTxt-color: #C9D1D9;
   --blueTxt-color: #58A6FF;
   --bodyBg-color: #0d1117;
@@ -162,7 +162,7 @@ img {
 .navHeader{
   background-color: transparent;
   display: flex;
-  padding: 2rem 2rem 1rem;
+  padding: 1rem 2rem 1rem;
   align-items: center;
   justify-content: space-between;
   z-index: 2;
@@ -243,12 +243,12 @@ img {
 
 .navList{
     padding: 2rem 0;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .navLink{
-    text-transform: uppercase;
-    color: var(--headTxt-color);
+    color: var(--headerTxt-color);
+    font-family: var(--font);
 }
 
 .mobileDisplay .navLink:hover, .mobileDisplay .navLink:focus{
@@ -290,20 +290,22 @@ img {
     align-items: center;
     position: absolute;
     z-index: 1;
-    padding: 2rem 2rem;
+    padding: 1rem 2rem;
     width: 100%;
   }
 
   .navItems{
       display: flex;
+      align-items: center;
   }
 
   .navList{
-      padding: 0 2rem;
+      padding: 0 .5rem;
   }
 
   .navLink{
-      font-size: var(--font-fourteen);
+      font-size: var(--font-twelve);
+      font-weight: 600;
   }
 
   .desktopDisplay .navLink:hover, .desktopDisplay .navLink:active{
@@ -317,6 +319,7 @@ img {
   }
 
 }
+
 
 @media screen and (min-width: 1040px){
     .navLink{
