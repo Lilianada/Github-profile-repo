@@ -35,8 +35,9 @@ import { NavLink  } from 'react-router-dom';
         transition: 80ms cubic-bezier(0.33, 1, 0.68, 1);
         transition-property: color,background-color,box-shadow,border-color;
 
-        & :hover, :focus{
+        &:hover, :focus{
             width: 500px;
+            color: var(--headerBg-color);
         }
 
     `
@@ -52,7 +53,7 @@ import { NavLink  } from 'react-router-dom';
         border: none;
         outline: none;
 
-        & :hover, :focus{
+        &:hover, :focus{
             width: 100%;
         }
 
@@ -94,7 +95,7 @@ export default function Header () {
                     <ul className="navItems">
                         <li className="navList"> <NavLink smooth to="/" className="mobileLogo"><BsGithub size={30} fill='#F0F6FC' /></NavLink></li>
                         <li className="navList">
-                            <NavLink smooth to="/#what-we-do" className="navLink"> 
+                            <div className="navLink"> 
                                 <InputBox>
                                     <Input
                                         type="search" 
@@ -103,7 +104,7 @@ export default function Header () {
                                     />
                                     <Box><p style={{fontSize: "10px", lineHeight: "none"}}>/</p></Box>
                                 </InputBox> 
-                            </NavLink></li>
+                            </div></li>
                         <li className="navList"><NavLink smooth to="/what-we-use" className="navLink">Pulls</NavLink></li>
                         <li className="navList"><NavLink smooth to="/who-we-are" className="navLink">Issues</NavLink></li>
                         <li className="navList"><NavLink smooth to="/contact" className="navLink">Marketplace</NavLink></li>
