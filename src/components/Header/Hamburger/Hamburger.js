@@ -86,7 +86,7 @@ export default function Hamburger (){
                 <ul className="navItems">
                     <li className="navList"> <NavLink smooth to="/" className="mobileLogo"><BsGithub size={24} fill='#F0F6FC' /></NavLink></li>
                         <li className="navList" onClick={CloseMenu}>
-                            <NavLink smooth to="search" className="navLink"> 
+                            <div smooth to="search" className="navLink"> 
                                 <InputBox>
                                     <Input
                                         type="search" 
@@ -95,7 +95,8 @@ export default function Hamburger (){
                                     />
                                     <Box><p style={{fontSize: "10px", lineHeight: "none"}}>/</p></Box>
                                 </InputBox> 
-                            </NavLink></li>
+                            </div>
+                            </li>
                         <li className="navList" onClick={CloseMenu}> <NavLink smooth to="/pulls" className="navLink">Pulls</NavLink></li>
                         <li className="navList" onClick={CloseMenu}> <NavLink smooth to="/issues" className="navLink">Issues</NavLink></li>
                         <li className="navList" onClick={CloseMenu}> <NavLink smooth to="/marketplace" className="navLink">Marketplace</NavLink></li>

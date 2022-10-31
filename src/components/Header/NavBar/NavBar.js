@@ -102,7 +102,7 @@ export default function Header () {
                                         name='search' 
                                         placeholder='Search or jump to...'
                                     />
-                                    <Box><p style={{fontSize: "10px", lineHeight: "none"}}>/</p></Box>
+                                    <Box><p style={{fontSize: "10px", lineHeight: "13px"}}>/</p></Box>
                                 </InputBox> 
                             </div></li>
                         <li className="navList"><NavLink smooth to="/what-we-use" className="navLink">Pulls</NavLink></li>

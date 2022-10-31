@@ -42,6 +42,7 @@ const Label = styled.label`
 const Span = styled.span`
     color: var(--blueTxt-color);
     font-size: var(--font-twelve);
+    cursor: pointer;
 `
 
 const Flex = styled.div`
@@ -103,6 +104,7 @@ const Text = styled.p`
 
     >span{
         margin-left: 3px;
+        
     }
 `
 export default function Login () {

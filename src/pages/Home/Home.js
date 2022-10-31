@@ -1,9 +1,5 @@
+import React from "react";
 
-
-function Home () {
-    return (
-        <main className="bodyWrapper">
-            
-        </main>
-    )
+export default function Home() {
+  return <div>Home</div>;
 }

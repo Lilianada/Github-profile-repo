@@ -1,44 +1,41 @@
 /*------------ [_Root] -----------*/
 :root {
-
   /* Colors */
-  --bodyTxt-color: #8B949E;
-  --headerTxt-color: #F0F6FC;
-  --headTxt-color: #C9D1D9;
-  --blueTxt-color: #58A6FF;
+  --bodyTxt-color: #8b949e;
+  --headerTxt-color: #f0f6fc;
+  --headTxt-color: #c9d1d9;
+  --blueTxt-color: #58a6ff;
   --bodyBg-color: #0d1117;
-  --headerBg-color: #161B22;
+  --headerBg-color: #161b22;
   --greenBg-color: #238636;
-  --blueBg-color: #388BFD26;
-  --starBg-color: #E3B341;
-  --htmlBg-color: #E34C26;
-  --htmlBg-color: #563D7C;
-  --javascriptBg-color: #F1E05A;
-  --typescriptBg-color: #2B7489;
-
+  --blueBg-color: #388bfd26;
+  --starBg-color: #e3b341;
+  --htmlBg-color: #e34c26;
+  --htmlBg-color: #563d7c;
+  --javascriptBg-color: #f1e05a;
+  --typescriptBg-color: #2b7489;
 
   /* FontStyle*/
-  --font: 'Segoe UI';
-  
+  --font: "Segoe UI";
 
   /* Font Sizes */
   --font-thirtyTwo: 1.35rem;
   --font-twentyFour: 1.25rem;
   --font-twenty: 1.2rem;
-  --font-sixteen: .8725rem;
-  --font-fourteen: .88rem;
-  --font-twelve: .75rem;
+  --font-sixteen: 0.8725rem;
+  --font-fourteen: 0.88rem;
+  --font-twelve: 0.75rem;
 }
 
-@media screen and (min-width:900px) {
-    :root {
-        --font-thirtyTwo: 2rem;
-        --font-twentyFour: 1.5rem;
-        --font-twenty: 1.25rem;
-        --font-sixteen: 1rem;
-        --font-fourteen: .88rem;
-        --font-twelve: .75rem;
-    }
+@media screen and (min-width: 900px) {
+  :root {
+    --font-thirtyTwo: 2rem;
+    --font-twentyFour: 1.5rem;
+    --font-twenty: 1.25rem;
+    --font-sixteen: 1rem;
+    --font-fourteen: 0.88rem;
+    --font-twelve: 0.75rem;
+  }
 }
 
 /*========================================*/
@@ -47,96 +44,102 @@
 *,
 ::before,
 ::after {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 @font-face {
-    font-family: 'Segoe UI';
-    src: url('../src/assets/Segoe-UI-Font/SegoeUI.woff2') format('woff2'),
-         url('../src/assets/Segoe-UI-Font/SegoeUI.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Segoe UI";
+  src: url("../src/assets/Segoe-UI-Font/SegoeUI.woff2") format("woff2"),
+    url("../src/assets/Segoe-UI-Font/SegoeUI.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
-
-
 
 /*========================================*/
 /*--------------- [_Utility] -------------*/
 /*========================================*/
 body {
-    max-width: 2560px;
-    height: 100vh;
-    background-color: var(--bodyBg-color);
-    font-family: var(--font);
-    color: var(--bodyTxt-color);
-    letter-spacing: -0.5px;
+  max-width: 2560px;
+  height: 100vh;
+  background-color: var(--bodyBg-color);
+  font-family: var(--font);
+  color: var(--bodyTxt-color);
+  letter-spacing: -0.5px;
 }
 
-p, h1, h2, h3,
-h4, h5, h6{
-    padding: 0;
-    margin: 0;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
 }
 
-h2, h3,
-h4, h5, h6 {
-    color: var(--head-pri-color);
-    font-family: var(--font);
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--head-pri-color);
+  font-family: var(--font);
 }
 
 p {
-    font-size: var(--font-fourteen);
-    line-height: 1.5rem;
-    color: var(--text-pri-color);
+  font-size: var(--font-fourteen);
+  line-height: 1.5rem;
+  color: var(--text-pri-color);
 }
 
 h1 {
-    font-size: var(--font-thirtyTwo);
-    /* line-height: 6rem; */
-    font-weight: 500;
-    letter-spacing: 1px;
+  font-size: var(--font-thirtyTwo);
+  /* line-height: 6rem; */
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
 h2 {
-    font-size: var(--font-twentyFour);
-    line-height: 2rem;
-    font-weight: 700;
+  font-size: var(--font-twentyFour);
+  line-height: 2rem;
+  font-weight: 700;
 }
 
 h3 {
-    font-size: var(--font-twenty);
-    line-height: 2rem;
-    font-weight: 600;
+  font-size: var(--font-twenty);
+  line-height: 2rem;
+  font-weight: 600;
 }
 
 h4 {
-    font-size: var(--font-sixteen);
-    line-height: 1.5rem;
-    font-weight: 600;
+  font-size: var(--font-sixteen);
+  line-height: 1.5rem;
+  font-weight: 600;
 }
 
 h5 {
-    font-size: var(--font-twelve);
-    font-weight: 600;
-    line-height: 1.5rem;
+  font-size: var(--font-twelve);
+  font-weight: 600;
+  line-height: 1.5rem;
 }
 
 h6 {
-    font-size: 12px;
-    line-height: 1.2rem;
-    font-weight: 600;
+  font-size: 12px;
+  line-height: 1.2rem;
+  font-weight: 600;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
-    font-family: var(--font);
+  text-decoration: none;
+  color: inherit;
+  font-family: var(--font);
 }
 
 ul li {
@@ -151,7 +154,7 @@ img {
 }
 
 /*--------------- [Body Wrapper] -------------*/
-.bodyWrapper{
+.bodyWrapper {
   display: grid;
   grid-template-columns: 100%;
   overflow: hidden;
@@ -159,7 +162,7 @@ img {
 
 /*--------------- [_Header] -------------*/
 
-.navHeader{
+.navHeader {
   background-color: transparent;
   display: flex;
   padding: 1rem 2rem 1rem;
@@ -169,121 +172,122 @@ img {
   position: relative;
 }
 
-.desktopDisplay{
-    display: none;
+.desktopDisplay {
+  display: none;
 }
 
-.mobileMenu{
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    z-index: 3;
-    box-shadow: 0px 5px 30px 0px rgb(37 37 37);
-    -webkit-box-shadow: 0px 5px 30px 0px rgb(37 37 37);
-    -moz-box-shadow: 0px 5px 30px 0px rgb(37 37 37);
-    font-size: var(--font-eighteen);
-    transform: translateX(0%);
-    -webkit-transition: .5s;
-    transition: .5s;
-    justify-content: space-between;
-    color: var(--headTxt-color);
-    background: var(--headerBg-color);
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  box-shadow: 0px 5px 30px 0px rgb(37 37 37);
+  -webkit-box-shadow: 0px 5px 30px 0px rgb(37 37 37);
+  -moz-box-shadow: 0px 5px 30px 0px rgb(37 37 37);
+  font-size: var(--font-eighteen);
+  transform: translateX(0%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  justify-content: space-between;
+  color: var(--headTxt-color);
+  background: var(--headerBg-color);
 }
 
-.active{
-    transform: translate3d(-70%, 0, 0);
-	animation-timing-function: 1s ease-in;
+.active {
+  transform: translate3d(-70%, 0, 0);
+  animation-timing-function: 1s ease-in;
 }
 
-.mobileLogo{
+.mobileLogo {
   width: 30px;
 }
 
-.navToggle{
-    cursor: pointer;
+.navToggle {
+  cursor: pointer;
 }
 
-.bar{
-    width: 25px;
-    height: 3px;
-    margin: 4px;
-    background: var(--headTxt-color);
-    transition: .4s;
+.bar {
+  width: 25px;
+  height: 3px;
+  margin: 4px;
+  background: var(--headTxt-color);
+  transition: 0.4s;
 }
 
-.bTwo{
-    width: 1rem;
-    transform: translateX(8px);
+.bTwo {
+  width: 1rem;
+  transform: translateX(8px);
 }
 
-.change .bar{
-    display: block;
-    background: var(--headTxt-color);
-    cursor: pointer;
+.change .bar {
+  display: block;
+  background: var(--headTxt-color);
+  cursor: pointer;
 }
 
-.change .bOne{ 
-    transform: translateY(5px) rotate(45deg);
+.change .bOne {
+  transform: translateY(5px) rotate(45deg);
 }
 
-.change .bTwo{
-    opacity: 0;
+.change .bTwo {
+  opacity: 0;
 }
 
-.change .bThree{
-    transform: translateY(-8.75px) rotate(-45deg);
+.change .bThree {
+  transform: translateY(-8.75px) rotate(-45deg);
 }
 
-.mobileDisplay .navItems{
-    margin: 2rem 2rem 0;
+.mobileDisplay .navItems {
+  margin: 2rem 2rem 0;
 }
 
-.navList{
-    padding: 2rem 0;
-    font-weight: 600;
+.navList {
+  padding: 2rem 0;
+  font-weight: 400;
 }
 
-.navLink{
-    color: var(--headerTxt-color);
-    font-family: var(--font);
+.navLink {
+  color: var(--headerTxt-color);
+  font-family: var(--font);
 }
 
-.mobileDisplay .navLink:hover, .mobileDisplay .navLink:focus{
-    color: var(--bodyTxt-color);
-    transition: .3s ease-in-out;
+.mobileDisplay .navLink:hover,
+.mobileDisplay .navLink:focus {
+  color: var(--bodyTxt-color);
+  transition: 0.3s ease-in-out;
 }
 
-.navFooter{
-    margin: 1rem 2rem 2rem;
+.navFooter {
+  margin: 1rem 2rem 2rem;
 }
 
-.navSocialLinks{
-    display: flex;
-    font-size: var(--font-fourteen);
-    justify-content: space-between;
+.navSocialLinks {
+  display: flex;
+  font-size: var(--font-fourteen);
+  justify-content: space-between;
 }
 
-.copyrightWhite p{
-    font-size: var(--font-twelve);
-    color: var(--headTxt-color);
-    margin-top: 2rem;
+.copyrightWhite p {
+  font-size: var(--font-twelve);
+  color: var(--headTxt-color);
+  margin-top: 2rem;
 }
 
 @media screen and (min-width: 500px) {
-    .navSocialLinks{
-        width: 55%;
-    }
+  .navSocialLinks {
+    width: 55%;
+  }
 }
 
-@media screen and (min-width: 900px){
-  .mobileDisplay{
-    display: none; 
+@media screen and (min-width: 900px) {
+  .mobileDisplay {
+    display: none;
   }
 
-  .desktopDisplay{
+  .desktopDisplay {
     background: transparent;
     display: flex;
     justify-content: space-between;
@@ -294,44 +298,40 @@ img {
     width: 100%;
   }
 
-  .navItems{
-      display: flex;
-      align-items: center;
+  .navItems {
+    display: flex;
+    align-items: center;
   }
 
-  .navList{
-      padding: 0 .5rem;
+  .navList {
+    padding: 0 0.5rem;
   }
 
-  .navLink{
-      font-size: var(--font-twelve);
-      font-weight: 600;
+  .navLink {
+    font-size: var(--font-twelve);
+    font-weight: 400;
   }
 
-  .desktopDisplay .navLink:hover, .desktopDisplay .navLink:active{
-      color: var(--blue-color);
-      transition: .3s ease-in-out;
-      border-bottom: 2px solid var(--bodyTxt-color);
+  .desktopDisplay .navLink:hover,
+  .desktopDisplay .navLink:active {
+    color: var(--blue-color);
+    transition: 0.3s ease-in-out;
+    border-bottom: 2px solid var(--bodyTxt-color);
   }
 
-  .navRight{
-      font-weight: 500;
+  .navRight {
+    font-weight: 500;
   }
-
 }
 
-
-@media screen and (min-width: 1040px){
-    .navLink{
-        font-size: var(--font-eighteen);
-    }
+@media screen and (min-width: 1040px) {
+  .navLink {
+    font-size: var(--font-eighteen);
+  }
 }
 
 @media screen and (min-width: 1023px) {
-    h1{
-        font-size: 15rem;
-    }
+  h1 {
+    font-size: 15rem;
+  }
 }
-
-
-
