@@ -20,19 +20,19 @@
 }
 
 .errorHead{
-    font-size: var(--thirtyTwo);
+    font-size: var(--font-thirtyTwo);
     margin-bottom: 1rem;
 }
 
 .errorButton{
     width: 9rem;
     height: 2.5rem;
-    font-size: var(--eighteen);
+    font-size: var(--font-twenty);
     border: none;
     border-radius: 10px;
     outline: none;
     background-color: #fff;
-    color: #271871;
+    color: #3e2c9a;
     cursor: pointer;
     transition: all .5s;
 }
