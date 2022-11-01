@@ -1,0 +1,42 @@
+.errorWrapper {
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+      color: #000;
+      background-color: #fff;
+      font-family: 'Inter', sans-serif;
+  }
+  
+.errorImage{
+    width: 70%;
+    height: 70%;
+}
+
+.errorBody{
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.errorHead{
+    font-size: var(--thirtyTwo);
+    margin-bottom: 1rem;
+}
+
+.errorButton{
+    width: 9rem;
+    height: 2.5rem;
+    font-size: var(--eighteen);
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background-color: #fff;
+    color: #271871;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.errorButton:hover{
+ transform: scale(.95, .95);
+}
