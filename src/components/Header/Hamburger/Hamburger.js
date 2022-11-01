@@ -94,7 +94,7 @@ export default function Hamburger (){
                         </NavLink>
                     </li>
                     <li className="navList" onClick={CloseMenu}>
-                        <div smooth to="search" className="navLink"> 
+                        <div className="navLink"> 
                             <InputBox>
                                 <Input
                                     type="search" 
