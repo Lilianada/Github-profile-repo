@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import './RepoPage.css';
 import Header from "../Header/NavBar/NavBar";
 import axios from "axios";
+import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 
 
 export default function RepositoryPage () {
@@ -14,7 +15,7 @@ export default function RepositoryPage () {
         const url = `https://api.github.com/users/lilianada/repos?page=1&per_page=10`;
         axios.get(url).then((response) => {
             setData(response.data);
-            // console.log(response.data)
+            console.log(response.data)
             setLoading(true);
         }).catch((err) => {
             setError(err);
@@ -40,22 +41,26 @@ export default function RepositoryPage () {
     
     return(
         <main className="wrapper">
-            <Header/> 
+            {/* <Header/>  */}
             <div className="head">
                 <p>Repositories</p>
             </div>
-            {
-                loading ? (<p>loading...</p>) : (
-                    data.map((item) => {
-                        <div className="body">
-                                    <p> {item.name} </p>
+            <ErrorBoundary>
+                {
+                    loading ? (<p>loading...</p>) : (
+                        data.map((item) => {
+                            return (
+                                <div className="body" key={item.id}>
+                                <p> {item.name} </p>
                                 <p>
                                     {item.html_url}
                                 </p>
-                        </div >
+                            </div >
+                        )
                     }) 
-                )
-            }
+                    )
+                }
+            </ErrorBoundary>
         </main>
     )
 }

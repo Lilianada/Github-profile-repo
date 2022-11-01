@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import './Hamburger.css';
 import { useState } from 'react'
 import {BsLinkedin, BsInstagram, BsTwitter, BsGithub} from 'react-icons/bs';
 import { IoNotificationsOutline } from "react-icons/io5";
@@ -7,63 +7,6 @@ import { AiOutlinePlus } from "react-icons/ai";
 import { NavLink } from 'react-router-dom';
 // import { motion } from 'framer-motion';
 
-const NavLogo = styled.div`
-    
-`
-
-const InputBox = styled.div`
-    display: flex;
-    width: 270px;
-    background: var(--bodyBg-color);
-    border: 1px solid var(--bodyTxt-color);
-    border-radius: 6px;
-    transition: 80ms cubic-bezier(0.33, 1, 0.68, 1);
-    transition-property: color,background-color,box-shadow,border-color;
-`
-
-const Input = styled.input`
-    background:transparent;
-    width: 100%;
-    padding: 5px 12px;
-    color: #F0F6FC;
-    font-size: var(--font-twelve);
-    font-weight: 300;
-    letter-spacing: normal;
-    border: none;
-    outline: none;
-
-    & :hover, :focus{
-        background: var(--headerBg-color);
-        border: 1px solid var(--headTxt-color);
-    }
-
-    &::placeholder{
-        color: var(--bodyTxt-color);
-    }
-`
-
-const Box = styled.div`
-    width: .75rem;
-    height: 1rem;
-    border: 1px solid var(--headTxt-color);
-    border-radius: 3px;
-    margin: .25rem;
-    text-align: center;
-    line-height: 0%;
-
-`
-const LeftList = styled.div`
-    
-`
-const RightList = styled.div`
-    
-`
-const Circle = styled.div`
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 50%;
-    border: 1px solid var(--headerTxt-color);
-`
 
 export default function Hamburger (){
     const [toggle, setToggle] = useState(false);
@@ -95,16 +38,17 @@ export default function Hamburger (){
                     </li>
                     <li className="navList" onClick={CloseMenu}>
                         <div className="navLink"> 
-                            <InputBox>
-                                <Input
+                            <div className='inputBox'>
+                                <input 
+                                    className='input'
                                     type="search" 
                                     name='search' 
                                     placeholder='Search or jump to...'
                                 />
-                                <Box>
+                                <div className='box'>
                                     <p style={{fontSize: "10px", lineHeight: "13px"}}>/</p>
-                                </Box>
-                            </InputBox> 
+                                </div>
+                            </div> 
                         </div>
                         </li>
                     <li className="navList" onClick={CloseMenu}> <NavLink smooth to="/pulls" className="navLink">Pulls</NavLink></li>
