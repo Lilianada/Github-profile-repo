@@ -5,7 +5,7 @@
     height: 100%;
 }
 
-.head{
+.bodyContent{
 
 }
 
@@ -14,7 +14,7 @@
     justify-content: center;
 }
 
-.body{
+.content{
     display: grid;
     grid-template-columns: 40% 60%;
     place-items: center;

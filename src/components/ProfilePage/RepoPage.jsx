@@ -41,26 +41,28 @@ export default function RepositoryPage () {
     
     return(
         <main className="wrapper">
-            {/* <Header/>  */}
-            <div className="head">
-                <p>Repositories</p>
-            </div>
-            <ErrorBoundary>
-                {
-                    loading ? (<p>loading...</p>) : (
-                        data.map((item) => {
-                            return (
-                                <div className="body" key={item.id}>
-                                <p> {item.name} </p>
-                                <p>
-                                    {item.html_url}
-                                </p>
-                            </div >
+            <Header/> 
+            <div className="bodyContent">
+                <div className="head">
+                    <p>Repositories</p>
+                </div>
+                <ErrorBoundary>
+                    {
+                        loading ? (<p>loading...</p>) : (
+                            data.map((item) => {
+                                return (
+                                    <div className="content" key={item.id}>
+                                    <p> {item.name} </p>
+                                    <p>
+                                        {item.html_url}
+                                    </p>
+                                </div >
+                            )
+                        }) 
                         )
-                    }) 
-                    )
-                }
-            </ErrorBoundary>
+                    }
+                </ErrorBoundary>
+            </div>
         </main>
     )
 }

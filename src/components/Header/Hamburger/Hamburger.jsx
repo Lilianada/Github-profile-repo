@@ -18,9 +18,9 @@ export default function Hamburger (){
     <div className="mobileDisplay">
         <div className="navHeader">
             <NavLink smooth to="/" className="mobileLogo">
-                <NavLogo>
+                <div className='navLogo'>
                     <BsGithub size={48} fill='#F0F6FC' />
-                </NavLogo>
+                </div>
             </NavLink>
             <div className={toggle ? "change" : "navToggle"} onClick = {()=> setToggle(!toggle)}>
                 <div className="bar bOne" >{toggle}</div>
@@ -57,7 +57,7 @@ export default function Hamburger (){
                     <li className="navList" onClick={CloseMenu}> <NavLink smooth to="/explore" className="navLink">Explore</NavLink></li>
                     <li className="navList" onClick={CloseMenu}> <NavLink smooth to="/notification" className="mobileLogo"><IoNotificationsOutline size={20} fill='#F0F6FC' /></NavLink></li>
                     <li className="navList" onClick={CloseMenu}> <NavLink smooth to="/add" className="mobileLogo"><AiOutlinePlus size={20} fill='#F0F6FC' /></NavLink></li>
-                    <li className="navList" onClick={CloseMenu}> <NavLink smooth to="/profile" className="mobileLogo"><Circle></Circle></NavLink></li>
+                    <li className="navList" onClick={CloseMenu}> <NavLink smooth to="/profile" className="mobileLogo"><div className='circle'></div></NavLink></li>
                 </ul>
                 <div className="navFooter">
                     <div className="navSocialLinks">
