@@ -1,12 +1,11 @@
-.wrapper{
-    display: grid;
-    grid-template-columns: 100%;
-    width: 100%;
-    height: 100%;
+.bodyContent{
+    margin: 2rem;
+    /* height: 100%; */
 }
 
-.bodyContent{
-
+.head{
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .list{
@@ -16,6 +15,95 @@
 
 .content{
     display: grid;
-    grid-template-columns: 40% 60%;
-    place-items: center;
+    grid-template-columns: 35% 65%;
+    /* place-items: center; */
+}
+
+/* profile */
+.profile{
+    display: block;
+}
+
+.imageAavatar{
+    width: 296px;
+    height: 296px;
+    border-radius: 50%;
+    border: 1px solid #30363d;
+}
+
+.identity{
+    margin: 1rem 0 2rem;
+}
+
+.profileName{
+    font-size: var(--font-twentyFour);
+    color: var( --headTxt-color);
+    line-height: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: .5rem;
+}
+
+.profileLogin{
+    font-size: var(--font-twenty);
+}
+
+.cards{
+    width: 100%;
+}
+
+.card{
+    width: 100%;
+    min-height: 5rem;
+    border-top: 1px solid #21262d;
+    margin: 2rem 0;
+    padding-top: 1.35rem;
+}
+
+.repoLink{
+    display: flex;
+    align-items: center;
+}
+
+.repoName{
+    font-size: var(--font-twenty);
+    line-height: 30px;
+    text-transform: capitalize;
+    color: var(--blueTxt-color);
+    margin-right: 1rem;
+}
+
+.repoStatus p{
+    width: fit-content;
+    font-size: var(--font-twelve);
+    line-height: 18px;
+    color: var(--bodyTxt-color);
+    border: 1px solid rgb(48 54 61);
+    display: inline-block;
+    font-weight: 500;
+    white-space: nowrap;
+    padding: 0px 7px;
+    border-radius: 2em;
+}
+
+.description{
+    margin: .5rem 0;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.language {
+    margin-right: 1rem;
+}
+
+.none{
+    display: none;
+}
+
+.block{
+    display: block;
 }

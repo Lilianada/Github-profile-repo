@@ -1,6 +1,7 @@
 .navigation{
     background: var(--headerBg-color);
     color: var(--headTxt-color);
+    height: 4rem;
 }
 
 .desktopDisplay{
