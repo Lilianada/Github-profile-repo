@@ -3,7 +3,10 @@ import "./RepoPage.css";
 import Header from "../Header/NavBar/NavBar";
 import axios from "axios";
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
-import {IoIosStarOutline} from 'react-icons/io'
+import {IoIosStarOutline} from 'react-icons/io';
+import {FcPrevious, FcNext } from 'react-icons/fc';
+import {FiUsers} from 'react-icons/fi';
+import {GoPrimitiveDot} from 'react-icons/go';
 
 export default function RepositoryPage() {
   const [data, setData] = useState([]);
@@ -11,9 +14,11 @@ export default function RepositoryPage() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(1);
+  const [activePrev, setActivePrev] = useState(false);
+  const [activeNext, setActiveNext] = useState(false);
 
   const fetchData = () => {
-    const url = `https://api.github.com/users/lilianada/repos?page=1&per_page=10`;
+    const url = `https://api.github.com/users/lilianada/repos?page=${page}&per_page=10`;
     axios
       .get(url)
       .then((response) => {
@@ -55,15 +60,23 @@ export default function RepositoryPage() {
 
 
 
-//   const nextPage = () => {
-//     setPage((page) => page + 1);
-//     fetchData();
-//   };
+  const nextPage = () => {
+    setPage((page) => page + 1);
+    fetchData();
+    setActiveNext(!activeNext);
+    setTimeout(() => {
+        setActiveNext(activeNext);
+    }, 1000);
+};
 
-//   const prevPage = () => {
-//     setPage((page) => page - 1);
-//     fetchData();
-//   };
+const prevPage = () => {
+    setPage((page) => page - 1);
+    fetchData();
+    setActivePrev(!activePrev);
+    setTimeout(() => {
+        setActivePrev(activePrev);
+    }, 1000);
+  };
 
   return (
     <main className="wrapper">
@@ -83,12 +96,16 @@ export default function RepositoryPage() {
                     <p className="bioText">{profile.bio} </p>
                 </div>
                 <div className="follows">
-                    <div className="followers"></div>
+                    <div className="followers">
+                        <FiUsers />
+                        <h5>{item.followers} </h5>
+                    </div>
+                    <GoPrimitiveDot />
                     <div className="following"></div>
                 </div>
                 <div className="locate">
                     <div className="company">
-                        
+
                     </div>
                     <div className="loacation">
 
@@ -136,6 +153,16 @@ export default function RepositoryPage() {
                 })
               )}
             </ErrorBoundary>
+            <div className="buttonsWrap">
+                <button className={`btnDisabled ${activePrev ? 'btnActive' : '' }`} onClick={prevPage}>
+                    <FcPrevious className={`arrowDisabled ${activePrev ? 'arrowActive' : '' }`} />
+                    Previous
+                </button>
+                <button className={`btnDisabled ${activeNext ? 'btnActive' : '' }`} onClick={nextPage}>
+                    Next
+                    <FcNext className={`arrowDisabled ${activeNext ? 'arrowActive' : '' }`} />
+                </button>
+            </div>
           </div>
         </div>
       </div>

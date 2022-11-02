@@ -20,7 +20,7 @@
     outline: none;
 }
 
-.input :hover, :focus{
+.input:hover, .input:focus{
     background: var(--headerBg-color);
     border: 1px solid var(--headTxt-color);
 }
