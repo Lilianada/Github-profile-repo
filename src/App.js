@@ -1,5 +1,5 @@
 import './App.css';
-import RepositoryPage from './components/ProfilePage/RepoPage';
+import RepositoryPage from './components/ReposList/ReposList';
 import Home from './pages/Home/Home';
 
 function App() {

@@ -6,7 +6,7 @@ import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 import {IoIosStarOutline} from 'react-icons/io';
 import {FcPrevious, FcNext } from 'react-icons/fc';
 import {FiUsers} from 'react-icons/fi';
-import {GoPrimitiveDot} from 'react-icons/go';
+import {BsDot} from 'react-icons/bs';
 
 export default function RepositoryPage() {
   const [data, setData] = useState([]);
@@ -82,9 +82,11 @@ const prevPage = () => {
     <main className="wrapper">
       <Header />
       <div className="bodyContent">
-        {/* <div className="head">
-          <h3>Repositories {profile.public_repos} </h3>
-        </div> */}
+        <div className="head">
+          <h3>Repositories 
+            <span>{profile.public_repos}</span> 
+            </h3>
+        </div>
         <div className="content">
             <div className="profile">
                 <img src={profile.avatar_url} alt="Avatar" className="imageAavatar" />
@@ -97,11 +99,19 @@ const prevPage = () => {
                 </div>
                 <div className="follows">
                     <div className="followers">
-                        <FiUsers />
-                        <h5>{item.followers} </h5>
+                        <FiUsers style={{marginRight: ".5rem"}}/>
+                        <p>
+                            <span className="textBold">{profile.followers} </span>
+                            followers
+                        </p>
                     </div>
-                    <GoPrimitiveDot />
-                    <div className="following"></div>
+                    <BsDot fill="#c9d1d9"/>
+                    <div className="following">
+                        <p>
+                            <span className="textBold">{profile.following} </span>
+                            following
+                        </p>
+                    </div>
                 </div>
                 <div className="locate">
                     <div className="company">

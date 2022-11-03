@@ -7,6 +7,21 @@
   text-align: center;
 }
 
+.head h3{
+    font-weight: 500;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 1rem;
+}
+
+.head h3 span{
+    font-size: var(--font-fourteen);
+    background-color: #30363d;
+    padding: .35rem .5rem;
+    border-radius: 10px;
+    width: 5rem;
+    margin-left: .7rem;
+}
+
 .list {
   display: flex;
   justify-content: center;
@@ -23,14 +38,15 @@
 }
 
 .imageAavatar {
-  width: 296px;
-  height: 296px;
+  max-width: 296px;
+  max-height: 296px;
+  width: 85%;
   border-radius: 50%;
   border: 1px solid #30363d;
 }
 
 .identity {
-  margin: 1rem 0 2rem;
+  margin: 1rem 0;
 }
 
 .profileName {
@@ -38,7 +54,7 @@
   color: var(--headTxt-color);
   line-height: 1.5rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
@@ -46,16 +62,10 @@
   font-size: var(--font-twenty);
 }
 
-.cards {
-  width: 100%;
-}
-
-.card {
-  width: 100%;
-  min-height: 5rem;
-  border-top: 1px solid #21262d;
-  margin: 2rem 0;
-  padding-top: 1.35rem;
+.bioText {
+  font-size: var(--font-sixteen);
+  color: var(--headTxt-color);
+  font-weight: 500;
 }
 
 .repoLink {
@@ -84,14 +94,45 @@
   border-radius: 2em;
 }
 
-.description {
-  margin: 0.5rem 0;
-}
-
-.row {
+.follows {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  margin-top: 0.75rem;
+}
+
+.followers {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: var(--font-sixteen);
+}
+
+.followers span,
+.following span {
+  color: var(--headTxt-color);
+}
+
+.cards {
+  width: 100%;
+}
+
+.card {
+  width: 100%;
+  min-height: 5rem;
+  border-top: 1px solid #21262d;
+  margin: 2rem 0;
+  padding-top: 1.35rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.description {
+  margin: 0.5rem 0;
 }
 
 .language {
@@ -107,10 +148,10 @@
 }
 
 /* Buttons */
-.buttonsWrap{
-    display: flex;
-    width: 13rem;
-    justify-content: space-between;
+.buttonsWrap {
+  display: flex;
+  width: 13rem;
+  justify-content: space-between;
 }
 
 .btnDisabled {
@@ -131,17 +172,17 @@
   border: none;
   border: 1px solid transparent;
   border-radius: 6px;
-  transition: border-color .2s cubic-bezier(0.3, 0, 0.5, 1);
+  transition: border-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
 }
 
-.btnActive{
-    color: var(--blueTxt-color);
+.btnActive {
+  color: var(--blueTxt-color);
 }
 
-.arrowDisabled{
-    fill-opacity: .5;
+.arrowDisabled {
+  fill-opacity: 0.5;
 }
 
-.arrowActive{
-    fill-opacity: 1;
+.arrowActive {
+  fill-opacity: 1;
 }
