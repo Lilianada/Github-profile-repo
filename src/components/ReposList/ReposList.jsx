@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./RepoPage.css";
+import "./ReposList.css";
 import Header from "../Header/NavBar/NavBar";
 import axios from "axios";
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
@@ -8,7 +8,7 @@ import {FcPrevious, FcNext } from 'react-icons/fc';
 import {FiUsers} from 'react-icons/fi';
 import {BsDot} from 'react-icons/bs';
 
-export default function RepositoryPage() {
+export default function RepositoriesList() {
   const [data, setData] = useState([]);
   const [profile, setProfile] = useState([]);
   const [error, setError] = useState("");
@@ -88,6 +88,7 @@ const prevPage = () => {
             </h3>
         </div>
         <div className="content">
+          <ErrorBoundary>
             <div className="profile">
                 <img src={profile.avatar_url} alt="Avatar" className="imageAavatar" />
                 <div className="identity">
@@ -122,6 +123,7 @@ const prevPage = () => {
                     </div>
                 </div>
             </div>
+          </ErrorBoundary>
           <div className="cards">
             <ErrorBoundary>
               {loading ? (
