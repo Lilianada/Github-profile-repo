@@ -28,8 +28,15 @@
 }
 
 .content {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .content{
+    display: grid;
   grid-template-columns: 35% 65%;
+  }
 }
 
 /* profile */

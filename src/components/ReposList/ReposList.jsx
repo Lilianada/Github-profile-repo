@@ -17,18 +17,17 @@ export default function RepositoriesList() {
   const [activePrev, setActivePrev] = useState(false);
   const [activeNext, setActiveNext] = useState(false);
 
+  const url = `https://api.github.com/users/lilianada/repos?page=${page}&per_page=10`;
   const fetchData = () => {
-    const url = `https://api.github.com/users/lilianada/repos?page=${page}&per_page=10`;
+    setLoading(true);
     axios
       .get(url)
       .then((response) => {
         setData(response.data);
         console.log(response.data);
-        setLoading(true);
     })
     .catch((err) => {
         setError(err);
-        setLoading(true);
       })
       .finally(() => {
           setLoading(false);
@@ -40,18 +39,20 @@ export default function RepositoriesList() {
     axios
     .get(url)
     .then((response) => {
+      setLoading(true);
         setProfile(response.data);
-        setLoading(true);
         console.log(response.data);
     })
     .catch((err) => {
+      setLoading(true);
         setError(err);
-        setLoading(true);
     })
     .finally(() => {
         setLoading(false)
     })
   }
+
+  if (loading) { }
 
   useEffect(() => {
     fetchData();
@@ -126,9 +127,7 @@ const prevPage = () => {
           </ErrorBoundary>
           <div className="cards">
             <ErrorBoundary>
-              {loading ? (
-                <p>loading...</p>
-              ) : (
+              {
                 data.map((item) => {
                   return (
                     <div className="card" key={item.id}>
@@ -163,14 +162,14 @@ const prevPage = () => {
                     </div>
                   );
                 })
-              )}
+              }
             </ErrorBoundary>
             <div className="buttonsWrap">
                 <button className={`btnDisabled ${activePrev ? 'btnActive' : '' }`} onClick={prevPage}>
                     <FcPrevious className={`arrowDisabled ${activePrev ? 'arrowActive' : '' }`} />
                     Previous
                 </button>
-                <button className={`btnDisabled ${activeNext ? 'btnActive' : '' }`} onClick={nextPage}>
+                <button className={`btnDisabled ${activeNext ? 'btnActive' : '' }`} onClick={fetchData}>
                     Next
                     <FcNext className={`arrowDisabled ${activeNext ? 'arrowActive' : '' }`} />
                 </button>

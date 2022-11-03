@@ -17,7 +17,7 @@ export default function Hamburger (){
   return(
     <div className="mobileDisplay">
         <div className="navHeader">
-            <NavLink smooth to="/" className="mobileLogo">
+            <NavLink smooth="true" to="/" className="mobileLogo">
                 <div className='navLogo'>
                     <BsGithub size={48} fill='#F0F6FC' />
                 </div>
@@ -32,7 +32,7 @@ export default function Hamburger (){
         {toggle  && <div className={toggle ? "mobileMenu" : "active"}>
                 <ul className="navItems">
                     <li className="navList"> 
-                        <NavLink smooth to="/" className="mobileLogo">
+                        <NavLink smooth="true" to="/" className="mobileLogo">
                             <BsGithub size={24} fill='#F0F6FC' />
                         </NavLink>
                     </li>
@@ -51,13 +51,13 @@ export default function Hamburger (){
                             </div> 
                         </div>
                         </li>
-                    <li className="navList" onClick={CloseMenu}> <NavLink smooth to="/pulls" className="navLink">Pulls</NavLink></li>
-                    <li className="navList" onClick={CloseMenu}> <NavLink smooth to="/issues" className="navLink">Issues</NavLink></li>
-                    <li className="navList" onClick={CloseMenu}> <NavLink smooth to="/marketplace" className="navLink">Marketplace</NavLink></li>
-                    <li className="navList" onClick={CloseMenu}> <NavLink smooth to="/explore" className="navLink">Explore</NavLink></li>
-                    <li className="navList" onClick={CloseMenu}> <NavLink smooth to="/notification" className="mobileLogo"><IoNotificationsOutline size={20} fill='#F0F6FC' /></NavLink></li>
-                    <li className="navList" onClick={CloseMenu}> <NavLink smooth to="/add" className="mobileLogo"><AiOutlinePlus size={20} fill='#F0F6FC' /></NavLink></li>
-                    <li className="navList" onClick={CloseMenu}> <NavLink smooth to="/profile" className="mobileLogo"><div className='circle'></div></NavLink></li>
+                    <li className="navList" onClick={CloseMenu}> <NavLink smooth="true" to="/pulls" className="navLink">Pulls</NavLink></li>
+                    <li className="navList" onClick={CloseMenu}> <NavLink smooth="true" to="/issues" className="navLink">Issues</NavLink></li>
+                    <li className="navList" onClick={CloseMenu}> <NavLink smooth="true" to="/marketplace" className="navLink">Marketplace</NavLink></li>
+                    <li className="navList" onClick={CloseMenu}> <NavLink smooth="true" to="/explore" className="navLink">Explore</NavLink></li>
+                    <li className="navList" onClick={CloseMenu}> <NavLink smooth="true" to="/notification" className="mobileLogo"><IoNotificationsOutline size={20} fill='#F0F6FC' /></NavLink></li>
+                    <li className="navList" onClick={CloseMenu}> <NavLink smooth="true" to="/add" className="mobileLogo"><AiOutlinePlus size={20} fill='#F0F6FC' /></NavLink></li>
+                    <li className="navList" onClick={CloseMenu}> <NavLink smooth="true" to="/profile" className="mobileLogo"><div className='circle'></div></NavLink></li>
                 </ul>
                 <div className="navFooter">
                     <div className="navSocialLinks">
