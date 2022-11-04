@@ -7,32 +7,18 @@ import {IoIosStarOutline} from 'react-icons/io';
 import {FcPrevious, FcNext } from 'react-icons/fc';
 import {FiUsers} from 'react-icons/fi';
 import {BsDot} from 'react-icons/bs';
+import useFetch from "../useFetch";
+import RepositoryPage from "../RepoPage/RepoPage";
 
 export default function RepositoriesList() {
   const [data, setData] = useState([]);
-  const [profile, setProfile] = useState([]);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  
+  const [profile, setProfile] = useState([]);
   const [page, setPage] = useState(1);
   const [activePrev, setActivePrev] = useState(false);
   const [activeNext, setActiveNext] = useState(false);
-
-  const url = `https://api.github.com/users/lilianada/repos?page=${page}&per_page=10`;
-  const fetchData = () => {
-    setLoading(true);
-    axios
-      .get(url)
-      .then((response) => {
-        setData(response.data);
-        console.log(response.data);
-    })
-    .catch((err) => {
-        setError(err);
-      })
-      .finally(() => {
-          setLoading(false);
-      });
-  };
 
   const fetchProfile = () => {
     const url = "https://api.github.com/users/lilianada"
@@ -52,32 +38,53 @@ export default function RepositoriesList() {
     })
   }
 
-  if (loading) { }
+  if (loading) { <h3>Loading...</h3>}
+  
+  const fetchData = () => {
+    const url = `https://api.github.com/users/lilianada/repos?page=${page}&per_page=12`;
+    setLoading(true);
+    axios
+      .get(url)
+      .then((response) => {
+        setData(response.data);
+        console.log(response.data);
+    })
+    .catch((err) => {
+        setError(err);
+      })
+      .finally(() => {
+          setLoading(false);
+      });
+    };
 
   useEffect(() => {
-    fetchData();
+   fetchData();
     fetchProfile();
   }, []);
 
 
-
-  const nextPage = () => {
-    setPage((page) => page + 1);
-    fetchData();
-    setActiveNext(!activeNext);
-    setTimeout(() => {
+    const nextPage = () => {
+      setPage(page => page + 1);
+      fetchData();
+      setActivePrev(!activePrev);
+      setTimeout(() => {
         setActiveNext(activeNext);
     }, 1000);
 };
 
 const prevPage = () => {
-    setPage((page) => page - 1);
+    setPage(page - 1);
     fetchData();
     setActivePrev(!activePrev);
     setTimeout(() => {
         setActivePrev(activePrev);
     }, 1000);
   };
+
+  const [openRepo, setOpenRepo] = useState(false)
+  const isOpen = () => {
+    setOpenRepo(true);
+  }
 
   return (
     <main className="wrapper">
@@ -132,7 +139,10 @@ const prevPage = () => {
                   return (
                     <div className="card" key={item.id}>
                       <a href=" {item.html_url}" className="repoLink">
-                        <h5 className="repoName"> {item.name} </h5>
+                        <h5 className="repoName" onClick={() => isOpen}> {item.name} </h5>
+                        {
+                          openRepo && <RepositoryPage />
+                        }
                         <div className="repoStatus">
                             <p> {item.visibility} </p>
                         </div>
@@ -140,11 +150,6 @@ const prevPage = () => {
                       <div className="description">
                         <p> {item.description} </p>
                       </div>
-                      {/* <div className="updated">
-                        <p>
-                            {item.updated_at}
-                        </p>
-                      </div> */}
                       <div className="row">
                         <div className="language">
                             <p>
@@ -162,14 +167,14 @@ const prevPage = () => {
                     </div>
                   );
                 })
-              }
+               }
             </ErrorBoundary>
             <div className="buttonsWrap">
                 <button className={`btnDisabled ${activePrev ? 'btnActive' : '' }`} onClick={prevPage}>
                     <FcPrevious className={`arrowDisabled ${activePrev ? 'arrowActive' : '' }`} />
                     Previous
                 </button>
-                <button className={`btnDisabled ${activeNext ? 'btnActive' : '' }`} onClick={fetchData}>
+                <button className={`btnDisabled ${activeNext ? 'btnActive' : '' }`} onClick={nextPage}>
                     Next
                     <FcNext className={`arrowDisabled ${activeNext ? 'arrowActive' : '' }`} />
                 </button>

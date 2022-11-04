@@ -1,9 +1,15 @@
-.bodyContent {
-  margin: 2rem;
+/* .bodyContent {
+  margin: 1rem;
 }
 
+@media screen and (min-width: 768px) {
+  .bodyContent {
+    margin: 2rem;
+  }
+} */
+
 .head {
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   text-align: center;
 }
 
@@ -30,18 +36,30 @@
 .content {
   display: flex;
   flex-direction: column;
+  margin: 1rem;
 }
 
 @media screen and (min-width: 768px) {
   .content{
     display: grid;
-  grid-template-columns: 35% 65%;
+    grid-template-columns: 35% 65%;
+    margin: 2rem;
   }
 }
 
 /* profile */
 .profile {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .profile{
+    display: block;
+    text-align: left;
+  }
 }
 
 .imageAavatar {
@@ -120,6 +138,7 @@
   color: var(--headTxt-color);
 }
 
+/* Card */
 .cards {
   width: 100%;
 }
@@ -127,9 +146,9 @@
 .card {
   width: 100%;
   min-height: 5rem;
-  border-top: 1px solid #21262d;
+  border-bottom: 1px solid #21262d;
   margin: 2rem 0;
-  padding-top: 1.35rem;
+  padding-bottom: 1.35rem;
 }
 
 .row {
