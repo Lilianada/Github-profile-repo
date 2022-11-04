@@ -7,8 +7,8 @@ import {IoIosStarOutline} from 'react-icons/io';
 import {FcPrevious, FcNext } from 'react-icons/fc';
 import {FiUsers} from 'react-icons/fi';
 import {BsDot} from 'react-icons/bs';
-import useFetch from "../useFetch";
 import RepositoryPage from "../RepoPage/RepoPage";
+import { Link } from "react-router-dom";
 
 export default function RepositoriesList() {
   const [data, setData] = useState([]);
@@ -66,14 +66,14 @@ export default function RepositoriesList() {
     const nextPage = () => {
       setPage(page => page + 1);
       fetchData();
-      setActivePrev(!activePrev);
+      setActiveNext(!activePrev);
       setTimeout(() => {
         setActiveNext(activeNext);
     }, 1000);
 };
 
 const prevPage = () => {
-    setPage(page - 1);
+    setPage(page => page - 1);
     fetchData();
     setActivePrev(!activePrev);
     setTimeout(() => {
@@ -139,10 +139,9 @@ const prevPage = () => {
                   return (
                     <div className="card" key={item.id}>
                       <a href=" {item.html_url}" className="repoLink">
-                        <h5 className="repoName" onClick={() => isOpen}> {item.name} </h5>
-                        {
-                          openRepo && <RepositoryPage />
-                        }
+                        <Link to="/repository">
+                          <h5 className="repoName" onClick={() => isOpen}> {item.name} </h5>
+                        </Link>
                         <div className="repoStatus">
                             <p> {item.visibility} </p>
                         </div>

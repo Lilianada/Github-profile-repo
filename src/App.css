@@ -164,7 +164,7 @@ img {
 
 .wrapper {
     height: 100%;
-    overflow: scroll;
+    overflow-y: scroll;
     display: grid;
     grid-template-columns: 100%;
 }
