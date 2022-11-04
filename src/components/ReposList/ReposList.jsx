@@ -41,7 +41,7 @@ export default function RepositoriesList() {
   if (loading) { <h3>Loading...</h3>}
   
   const fetchData = () => {
-    const url = `https://api.github.com/users/lilianada/repos?page=${page}&per_page=12`;
+    const url = `https://api.github.com/users/lilianada/repos?page=${page}&per_page=12&sort=updated`;
     setLoading(true);
     axios
       .get(url)
@@ -81,10 +81,10 @@ const prevPage = () => {
     }, 1000);
   };
 
-  const [openRepo, setOpenRepo] = useState(false)
-  const isOpen = () => {
-    setOpenRepo(true);
-  }
+  // const [openRepo, setOpenRepo] = useState(false)
+  // const isOpen = () => {
+  //   setOpenRepo(true);
+  // }
 
   return (
     <main className="wrapper">
@@ -138,14 +138,12 @@ const prevPage = () => {
                 data.map((item) => {
                   return (
                     <div className="card" key={item.id}>
-                      <a href=" {item.html_url}" className="repoLink">
-                        <Link to="/repository">
-                          <h5 className="repoName" onClick={() => isOpen}> {item.name} </h5>
-                        </Link>
+                      <div className="repoLink">
+                        <h5 className="repoName"> {item.name} </h5>
                         <div className="repoStatus">
                             <p> {item.visibility} </p>
                         </div>
-                      </a>
+                      </div>
                       <div className="description">
                         <p> {item.description} </p>
                       </div>
@@ -161,8 +159,11 @@ const prevPage = () => {
                                 {item.stargazers_count}
                             </p>
                         </div>
-
                       </div>
+                      <Link to='/repository'>
+                        <button className="viewRepo">View Repo</button>
+                      </Link>
+                      
                     </div>
                   );
                 })
