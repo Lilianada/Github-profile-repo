@@ -11,10 +11,10 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} >
-          <Route path='/repository' element={ <RepositoryPage/>} />
+        <Route path="/" element={<App />} />
+          <Route path='/repository:id' element={ <RepositoryPage/>} />
           <Route path='*' element={<ErrorPage/>} />
-        </Route>
+        
       </Routes>
       {/* <App/> */}
     </BrowserRouter>

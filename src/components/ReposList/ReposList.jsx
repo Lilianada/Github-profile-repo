@@ -41,7 +41,7 @@ export default function RepositoriesList() {
   if (loading) { <h3>Loading...</h3>}
   
   const fetchData = () => {
-    const url = `https://api.github.com/users/lilianada/repos?page=${page}&per_page=12&sort=updated`;
+    const url = `https://api.github.com/users/lilianada/repos?page=${page}&per_page=12`;
     setLoading(true);
     axios
       .get(url)
@@ -55,7 +55,7 @@ export default function RepositoriesList() {
       .finally(() => {
           setLoading(false);
       });
-    };
+  };
 
   useEffect(() => {
    fetchData();
@@ -63,16 +63,17 @@ export default function RepositoriesList() {
   }, []);
 
 
-    const nextPage = () => {
-      setPage(page => page + 1);
-      fetchData();
-      setActiveNext(!activePrev);
-      setTimeout(() => {
-        setActiveNext(activeNext);
-    }, 1000);
-};
+  const nextPage = () => {
+    setPage(page => page + 1);
+    fetchData();
 
-const prevPage = () => {
+    setActiveNext(!activePrev);
+    setTimeout(() => {
+      setActiveNext(activeNext);
+    }, 1000);
+  };
+
+  const prevPage = () => {
     setPage(page => page - 1);
     fetchData();
     setActivePrev(!activePrev);
