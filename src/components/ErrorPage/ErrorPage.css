@@ -22,6 +22,7 @@
 .errorHead{
     font-size: var(--font-thirtyTwo);
     margin-bottom: 1rem;
+    color: var(--bodyBg-color);
 }
 
 .errorButton{
