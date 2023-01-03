@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import RepositoryPage from './components/RepoPage/RepoPage';
-import ErrorPage from './components/404age/ErrorPage';
+import ErrorPage from './components/404age/404Page';
 import RepositoriesList from './components/ReposList/ReposList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

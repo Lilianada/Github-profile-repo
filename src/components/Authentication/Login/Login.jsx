@@ -115,33 +115,34 @@ export default function Login () {
                 <BsGithub size={48} fill='#F0F6FC' />
                 <p>Sign in to Github</p>
             </header>
-            <Body>
-                <Form>
+            <div className="formWrap">
+                <form className="loginForm">
                    <div className="flexItem">
-                        <label className="labelText">Username or email address</label>
+                        <label className="loginLabel">Username or email address</label>
                    </div>
                     <input
                         type='username'
                         name="username"
-                        required
                         className="inputField"
+                        required
                     />
                     <Flex>
-                        <Label>Password</Label>
+                        <label className="loginLabel">Password</label>
                         <span className="spanText">Forgot password?</span>
                     </Flex>
-                    <Input
+                    <input
                         type='password'
                         name="password"
+                        className="inputField"
                         required
                     />
-                </Form>
-                <Button type="submit">Sign In</Button>
-            </Body>
+                </form>
+                <button type="submit" className="signIn">Sign In</button>
+            </div>
             
-            <Footer>
-                <Text>New Github?<Span> Create an account</Span>.</Text> 
-            </Footer>
+            <footer className="footer">
+                <p className="text">New Github?<span> Create an account</span>.</p> 
+            </footer>
         </section>
     )
 }
