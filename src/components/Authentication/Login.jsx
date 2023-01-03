@@ -8,7 +8,7 @@ export default function Login () {
     return(
         <main className="mainWrapper">
             <Header/>
-            <section className="wrapper">
+            <section className="loginWrapper">
             <header className="head">
                 <BsGithub size={48} fill='#F0F6FC' />
                 <p>Login to Github</p>

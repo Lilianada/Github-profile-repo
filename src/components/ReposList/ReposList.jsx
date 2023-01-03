@@ -20,6 +20,7 @@ export default function RepositoriesList() {
   const [activePrev, setActivePrev] = useState(false);
   const [activeNext, setActiveNext] = useState(false);
 
+  // Fetch my github profile
   const fetchProfile = () => {
     const url = "https://api.github.com/users/lilianada"
     axios
@@ -40,6 +41,7 @@ export default function RepositoriesList() {
 
   if (loading) { <h3>Loading...</h3>}
   
+  // Fetch my repositories
   const fetchData = () => {
     const url = `https://api.github.com/users/lilianada/repos?page=${page}&per_page=12`;
     setLoading(true);
@@ -62,7 +64,7 @@ export default function RepositoriesList() {
     fetchProfile();
   }, []);
 
-
+  // Pagination
   const nextPage = () => {
     setPage(page => page + 1);
     fetchData();
@@ -88,7 +90,7 @@ export default function RepositoriesList() {
   // }
 
   return (
-    <main className="wrapper">
+    <main className="mainWrapper">
       <Header />
       <div className="bodyContent">
         <div className="head">

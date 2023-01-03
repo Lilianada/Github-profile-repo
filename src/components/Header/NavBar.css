@@ -28,13 +28,6 @@
     background: var(--bodyBg-color);
     border: 1px solid var(--bodyTxt-color);
     border-radius: 6px;
-    transition: 80ms cubic-bezier(0.33, 1, 0.68, 1);
-    transition-property: color,background-color,box-shadow,border-color;
-}
-
-.inputBox:hover, .inputBox:focus{
-    width: 500px;
-    color: var(--headerBg-color);
 }
 
 .input{
