@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../Header/NavBar/NavBar";
+import Header from "../Header/NavBar";
 import './RepoPage.css';
 
 export default function RepositoryPage() {

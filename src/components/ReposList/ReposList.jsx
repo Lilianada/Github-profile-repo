@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./ReposList.css";
-import Header from "../Header/NavBar/NavBar";
+import Header from "../Header/NavBar";
 import axios from "axios";
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 import {IoIosStarOutline} from 'react-icons/io';

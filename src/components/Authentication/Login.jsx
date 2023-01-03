@@ -1,8 +1,8 @@
 import React from "react";
 import "./Login.css";
 import { BsGithub } from "react-icons/bs";
-import Header from "../../Header/NavBar/NavBar";
-import Hamburger from "../../Header/Hamburger/Hamburger";
+import Header from "../Header/NavBar";
+import { Link } from "react-router-dom";
 
 export default function Login () {
     return(
@@ -11,7 +11,7 @@ export default function Login () {
             <section className="wrapper">
             <header className="head">
                 <BsGithub size={48} fill='#F0F6FC' />
-                <p>Sign in to Github</p>
+                <p>Login to Github</p>
             </header>
             <div className="formWrap">
                 <form className="loginForm">
@@ -35,11 +35,11 @@ export default function Login () {
                         required
                     />
                 </form>
-                <button type="submit" className="signIn">Sign In</button>
+                <button type="submit" className="signIn">Login </button>
             </div>
             
             <footer className="footer">
-                <p className="text">New Github?<span> Create an account</span>.</p> 
+                <p className="text">New to Github?<Link to="/signup"> Create an account</Link>.</p> 
             </footer>
         </section>
         </main>

@@ -4,10 +4,8 @@ import RepositoriesList from './components/ReposList/ReposList';
 
 function App() {
   return (
-    <div className="mainWrapper">
       <RepositoriesList/>
-      {/* <RepositoryPage/> */}
-  </div>
+      
   );
 }
 

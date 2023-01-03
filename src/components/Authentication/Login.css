@@ -9,9 +9,16 @@
   margin: 0 auto;
 }
 
+@media screen and (min-width: 768px) {
+  .wrapper{
+    margin: 3rem auto;
+  }
+}
+
 .head {
   text-align: center;
 }
+
 .head p {
   font-weight: 200;
   font-size: 1.25rem;
@@ -103,6 +110,7 @@
   align-items: center;
   color: var(--headTxt-color);
 }
-.text > span {
+.text > a {
   margin-left: 3px;
+  color: var(--blueTxt-color);
 }

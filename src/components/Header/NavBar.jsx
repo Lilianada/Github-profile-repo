@@ -1,4 +1,4 @@
-import Hamburger from '../Hamburger/Hamburger';
+import Hamburger from './Hamburger';
 import React from 'react';
 import './NavBar.css';
 import { BsGithub } from "react-icons/bs";

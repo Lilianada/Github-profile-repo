@@ -1,5 +1,5 @@
 import React from 'react';
-import './Hamburger.css';
+import './NavBar.css';
 import { useState } from 'react'
 import {BsLinkedin, BsInstagram, BsTwitter, BsGithub} from 'react-icons/bs';
 import { IoNotificationsOutline } from "react-icons/io5";
