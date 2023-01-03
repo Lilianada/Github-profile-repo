@@ -51,13 +51,13 @@ export default function Hamburger (){
                             </div> 
                         </div>
                         </li>
-                    <li className="navList" onClick={CloseMenu}> <NavLink smooth="true" to="/pulls" className="navLink">Pulls</NavLink></li>
-                    <li className="navList" onClick={CloseMenu}> <NavLink smooth="true" to="/issues" className="navLink">Issues</NavLink></li>
-                    <li className="navList" onClick={CloseMenu}> <NavLink smooth="true" to="/marketplace" className="navLink">Marketplace</NavLink></li>
-                    <li className="navList" onClick={CloseMenu}> <NavLink smooth="true" to="/explore" className="navLink">Explore</NavLink></li>
-                    <li className="navList" onClick={CloseMenu}> <NavLink smooth="true" to="/notification" className="mobileLogo"><IoNotificationsOutline size={20} fill='#F0F6FC' /></NavLink></li>
-                    <li className="navList" onClick={CloseMenu}> <NavLink smooth="true" to="/add" className="mobileLogo"><AiOutlinePlus size={20} fill='#F0F6FC' /></NavLink></li>
-                    <li className="navList" onClick={CloseMenu}> <NavLink smooth="true" to="/profile" className="mobileLogo"><div className='circle'></div></NavLink></li>
+                    <li className="navList" onClick={CloseMenu}> <a className="navLink" href="https://lilydesigned.vercel.app/">Portfolio</a> </li>
+                    <li className="navList" onClick={CloseMenu}> <NavLink smooth="true" to="/error" className="navLink">Error</NavLink></li>
+                    <li className="navList" onClick={CloseMenu}> <NavLink smooth="true" to="/404page" className="navLink">404Page</NavLink></li>
+                    <li className="navList" onClick={CloseMenu}> <NavLink smooth="true" to="/login" className="navLink">Login</NavLink></li>
+                    <li className="navList" onClick={CloseMenu}> <NavLink smooth="true" to="/" className="mobileLogo"><IoNotificationsOutline size={20} fill='#F0F6FC' /></NavLink></li>
+                    <li className="navList" onClick={CloseMenu}> <NavLink smooth="true" to="/" className="mobileLogo"><AiOutlinePlus size={20} fill='#F0F6FC' /></NavLink></li>
+                    <li className="navList" onClick={CloseMenu}> <NavLink smooth="true" to="/" className="mobileLogo"><div className='circle'></div></NavLink></li>
                 </ul>
                 <div className="navFooter">
                     <div className="navSocialLinks">
@@ -66,7 +66,7 @@ export default function Hamburger (){
                         <a href="/" className="SocialLink"><BsTwitter /></a>
                     </div>
                     <div className="copyrightWhite">
-                        <p>© 2022 cloudnimi, inc.</p>
+                        <p>© 2023 Lilydesigned, inc.</p>
                     </div>
                 </div>
             </div>
