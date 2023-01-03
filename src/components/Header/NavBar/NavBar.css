@@ -1,7 +1,6 @@
 .navigation{
     background: var(--headerBg-color);
     color: var(--headTxt-color);
-    height: 4rem;
 }
 
 .desktopDisplay{
@@ -23,7 +22,7 @@
 
 .inputBox{
     display: flex;
-    width: 270px;
+    width: 100%;
     background: var(--bodyBg-color);
     border: 1px solid var(--bodyTxt-color);
     border-radius: 6px;

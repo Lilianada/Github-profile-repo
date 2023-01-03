@@ -4,7 +4,7 @@ import App from './App';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import RepositoryPage from './components/RepoPage/RepoPage';
 import ErrorPage from './components/404age/404Page';
-import RepositoriesList from './components/ReposList/ReposList';
+import Login from './components/Authentication/Login/Login';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,9 +14,8 @@ root.render(
         <Route path="/" element={<App />} />
           <Route path='/repository:id' element={ <RepositoryPage/>} />
           <Route path='*' element={<ErrorPage/>} />
-        
+          <Route path='/login' element={<Login/>} />
       </Routes>
-      {/* <App/> */}
     </BrowserRouter>
   </React.StrictMode>
 );
