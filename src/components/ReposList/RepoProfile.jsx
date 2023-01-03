@@ -2,6 +2,8 @@ import React from "react";
 import { BiBuildings } from "react-icons/bi";
 import { FiLink, FiUsers } from "react-icons/fi";
 import { BsDot } from "react-icons/bs";
+import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
+import "./ReposList.css";
 
 export default function RepoProfile({profile}) {
   return (

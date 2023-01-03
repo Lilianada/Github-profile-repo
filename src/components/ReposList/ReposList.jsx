@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import "./ReposList.css";
 import Header from "../Header/NavBar";
 import axios from "axios";
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 import RepoCard from "./RepoCard";
 import RepoProfile from "./RepoProfile";
+import RepoHead from "./RepoHead";
+import "./ReposList.css";
 
 export default function RepositoriesList() {
   const [data, setData] = useState([]);
@@ -124,13 +125,14 @@ export default function RepositoriesList() {
     <main className="mainWrapper">
       <Header />
       <div className="bodyContent">
-        
+        <RepoHead profile={profile} />
         <div className="content">
           <RepoProfile profile={profile} />
+
           <div className="cards">
             <ErrorBoundary>
               {currentItems.map((item) => {
-                return <RepoCard item={item} key={item.id} />;
+                return <RepoCard item={item} profile={profile} key={item.id} />;
               })}
             </ErrorBoundary>
 
