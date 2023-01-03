@@ -1,3 +1,7 @@
+import React from "react";
+import "./Login.css";
+import { BsGithub } from "react-icons/bs";
+
 export const Wrapper = styled.section`
     display: grid;
     place-items: center;
@@ -103,3 +107,42 @@ export const Text = styled.p`
         
     }
 `
+
+export default function Login () {
+    return(
+        <section className="wrapper">
+            <header className="head">
+                <BsGithub size={48} fill='#F0F6FC' />
+                <p>Sign in to Github</p>
+            </header>
+            <Body>
+                <Form>
+                   <div className="flexItem">
+                        <label className="labelText">Username or email address</label>
+                   </div>
+                    <input
+                        type='username'
+                        name="username"
+                        required
+                        className="inputField"
+                    />
+                    <Flex>
+                        <Label>Password</Label>
+                        <span className="spanText">Forgot password?</span>
+                    </Flex>
+                    <Input
+                        type='password'
+                        name="password"
+                        required
+                    />
+                </Form>
+                <Button type="submit">Sign In</Button>
+            </Body>
+            
+            <Footer>
+                <Text>New Github?<Span> Create an account</Span>.</Text> 
+            </Footer>
+        </section>
+    )
+}
+

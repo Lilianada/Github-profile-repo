@@ -51,7 +51,7 @@ export default function Hamburger (){
                             </div> 
                         </div>
                         </li>
-                    <li className="navList" onClick={CloseMenu}> <a className="navLink" href="https://lilydesigned.vercel.app/">Portfolio</a> </li>
+                    <li className="navList" onClick={CloseMenu}> <a className="navLink" href="https://lilydesigned.vercel.app/" target="_blank" rel="noreferrer" >Portfolio</a> </li>
                     <li className="navList" onClick={CloseMenu}> <NavLink smooth="true" to="/error" className="navLink">Error</NavLink></li>
                     <li className="navList" onClick={CloseMenu}> <NavLink smooth="true" to="/404page" className="navLink">404Page</NavLink></li>
                     <li className="navList" onClick={CloseMenu}> <NavLink smooth="true" to="/login" className="navLink">Login</NavLink></li>

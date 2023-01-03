@@ -27,7 +27,7 @@ export default function Header () {
                                     <div className='box'><p style={{fontSize: "10px", lineHeight: "13px"}}>/</p></div>
                                 </div> 
                             </div></li>
-                        <li className="navList"><a className="Link" href="https://lilydesigned.vercel.app/">Portfolio</a></li>
+                        <li className="navList"><a className="Link" href="https://lilydesigned.vercel.app/" target="_blank" rel="noreferrer" >Portfolio</a></li>
                         <li className="navList"><Link smooth="true" to="/who-we-are" className="Link">Error</Link></li>
                         <li className="navList"><Link smooth="true" to="/contact" className="Link">404Page</Link></li>
                         <li className="navList"><Link smooth="true" to="/Login" className="Link">Login</Link></li>
