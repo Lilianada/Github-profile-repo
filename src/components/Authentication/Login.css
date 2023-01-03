@@ -90,8 +90,8 @@
   margin-bottom: 0.5rem;
 }
 
-.signIn :hover,
-:focus {
+.signIn:hover,
+.signIn:focus {
   background: #249e3b;
 }
 

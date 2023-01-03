@@ -129,6 +129,18 @@
   color: var(--headTxt-color);
 }
 
+.locate {
+  display: block;
+  margin-top: 1rem;
+}
+
+.company, .blog {
+  display: flex;
+  align-items: center;
+}
+
+
+
 /* Card */
 .cards {
   width: 100%;

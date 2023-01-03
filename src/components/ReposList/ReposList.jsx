@@ -4,8 +4,8 @@ import Header from "../Header/NavBar";
 import axios from "axios";
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 import {IoIosStarOutline} from 'react-icons/io';
-import {FcPrevious, FcNext } from 'react-icons/fc';
-import {FiUsers} from 'react-icons/fi';
+import {BiBuildings} from 'react-icons/bi';
+import {FiLink, FiUsers} from 'react-icons/fi';
 import {BsDot} from 'react-icons/bs';
 import RepositoryPage from "../RepoPage/RepoPage";
 import { Link } from "react-router-dom";
@@ -43,7 +43,7 @@ export default function RepositoriesList() {
             key={number}
             id={number}
             onClick={handleClick}
-            className={currentPage === number ? "activeNum" : null}
+            className={currentPage === number ? "active" : null}
           >
             {number}
           </li>
@@ -166,10 +166,12 @@ export default function RepositoriesList() {
                 </div>
                 <div className="locate">
                     <div className="company">
-
+                      <BiBuildings style={{marginRight: ".5rem"}}/>
+                      {profile.company && <p> {profile.company} </p>}
                     </div>
-                    <div className="loacation">
-
+                    <div className="blog">
+                      <FiLink style={{marginRight: ".5rem"}}/>
+                      {profile.blog && <p> {profile.blog} </p>}
                     </div>
                 </div>
             </div>
