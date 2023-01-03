@@ -28,6 +28,10 @@
   margin-left: 0.7rem;
 }
 
+.headIcon{
+  margin-right: 0.5rem;
+}
+
 .list {
   display: flex;
   justify-content: center;
@@ -45,7 +49,7 @@
     padding-left: 20%;
     overflow-x: hidden;
   }
-  
+
   .content {
     display: grid;
     grid-template-columns: 35% 60%;
@@ -200,6 +204,7 @@
   margin-top: 0.5rem;
   font-style: normal;
   line-height: 20px;
+  width: fit-content;
   color: var(--headerTxt-color);
   text-align: center;
   white-space: nowrap;

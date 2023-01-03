@@ -10,26 +10,26 @@ export default function RepoHead({profile}) {
   return (
     <div className="head">
       <div className="headItem">
-        <BiBook style={{ marginRight: ".5rem" }} />
+        <BiBook className="headIcon" />
         <h3>Overview</h3>
       </div>
       <div className="headItem">
-        <GoRepo style={{ marginRight: ".5rem" }} />
-        <h3>
+        <GoRepo className="headIcon" />
+        <h3 style={{color: "#58a6ff"}}>
           Repositories
           <span>{profile.public_repos}</span>
         </h3>
       </div>
       <div className="headItem">
-        <AiOutlineLayout style={{ marginRight: ".5rem" }} />
+        <AiOutlineLayout className="headIcon" />
         <h3>Projects</h3>
       </div>
       <div className="headItem">
-        <FiPackage style={{ marginRight: ".5rem" }} />
+        <FiPackage className="headIcon" />
         <h3>Packages</h3>
       </div>
       <div className="headItem">
-        <IoIosStarOutline style={{ marginRight: ".5rem" }} />
+        <IoIosStarOutline className="headIcon" />
         <h3>
           Stars
           <span>{profile.public_gists}</span>
