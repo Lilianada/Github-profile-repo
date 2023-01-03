@@ -1,12 +1,19 @@
 .head {
-  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  border-bottom: 1px solid #30363d;
+  padding: 1rem;
 }
-
+.headItem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1rem;
+}
 .head h3{
     font-weight: 500;
-    border-bottom: 1px solid #30363d;
-    padding-bottom: 1rem;
 }
 
 .head h3 span{
@@ -32,7 +39,7 @@
 @media screen and (min-width: 768px) {
   .content{
     display: grid;
-    grid-template-columns: 35% 65%;
+    grid-template-columns: 35% 60%;
     margin: 2rem;
     gap: 2rem;
   }
@@ -177,7 +184,7 @@
 }
 
 .viewRepo{
-  background: var(--blueTxt-color);
+  background: #1f6feb;
   display: flex;
   align-items: center;
   min-width: 32px;
@@ -185,7 +192,7 @@
   margin-top: .5rem;
   font-style: normal;
   line-height: 20px;
-  color: var(--bodyBg-color);
+  color: var(--headerTxt-color);
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -237,3 +244,42 @@
 .arrowActive {
   fill-opacity: 1;
 }
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.pageNumbers{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
+}
+
+.pageNumbers li{
+  border: 1px solid var(--bodyTxt-color);
+    padding: 0.15rem 0.65rem;
+    color: var(--bodyTxt-color);
+    margin-left: 0.5rem;
+}
+
+.pageNumbers .active{
+  margin-left: .5rem;
+  color: var(--blueTxt-color);
+}
+
+.pageNumbers li button{
+  padding: 0.15rem 0.5rem;
+    color: var(--bodyTxt-color);
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    border: none;
+}
+/* 
+.pageNumbers li button:hover{
+  color: var(--blueTxt-color);
+} */

@@ -14,7 +14,7 @@ export default function RepositoryPage() {
   // return { getRepo };
   
   return (
-    <main className="wrapper">
+    <main className="mainWrapper">
       <Header/>
       <h3>Body</h3>
     </main>

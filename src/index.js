@@ -13,7 +13,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-          <Route path='/repository:id' element={ <RepositoryPage/>} />
+          <Route path='/repository' element={ <RepositoryPage/>} />
           <Route path='*' element={<ErrorPage/>} />
           <Route path='/login' element={<Login/>} />
           <Route path='/signup' element={<Signup/>} />
