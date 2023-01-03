@@ -14,12 +14,46 @@ export default function RepositoriesList() {
   const [data, setData] = useState([]);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  
   const [profile, setProfile] = useState([]);
-  const [page, setPage] = useState(1);
-  const [activePrev, setActivePrev] = useState(false);
-  const [activeNext, setActiveNext] = useState(false);
+  
+  
+  // Pagination
+  // stores current page number, initially 1
+  const [currentPage, setCurrentPage] = useState(1);
+  // stores no of items we want to display in single page.
+  const [pageItems, setPageItems] = useState(9);
+  // pages array contains total number of pages (total data e.g 20 / itemsPerPage e.g 5)*20/5 = 4 pages.
+  const pages = [];
+  for (let i = 1; i <= Math.ceil(data.length / pageItems); i++) {
+    pages.push(i);
+  }
+  const maxPageNum = 9;
+  const minPageNum = 1;
+  
+  // onclick handler for the buttons
+  const handleClick = (event) => {
+    setCurrentPage(Number(event.target.id));
+  };
 
+  // component to display the buttons
+  const showPageNumbers = pages.map((number) => {
+    if (number < maxPageNum + 1) {
+      return (
+          <li
+            key={number}
+            id={number}
+            onClick={handleClick}
+            className={currentPage === number ? "activeNum" : null}
+          >
+            {number}
+          </li>
+      );
+    } else {
+      return null;
+    }
+  });
+
+ 
   // Fetch my github profile
   const fetchProfile = () => {
     const url = "https://api.github.com/users/lilianada"
@@ -38,12 +72,12 @@ export default function RepositoriesList() {
         setLoading(false)
     })
   }
-
+  
   if (loading) { <h3>Loading...</h3>}
   
   // Fetch my repositories
   const fetchData = () => {
-    const url = `https://api.github.com/users/lilianada/repos?page=${page}&per_page=12`;
+    const url = `https://api.github.com/users/lilianada/repos?page=${currentPage}&per_page=${pageItems}`;
     setLoading(true);
     axios
       .get(url)
@@ -64,25 +98,30 @@ export default function RepositoriesList() {
     fetchProfile();
   }, []);
 
+  
+  
+
+
+
   // Pagination
-  const nextPage = () => {
-    setPage(page => page + 1);
-    fetchData();
+  // const nextPage = () => {
+  //   setPage(page => page + 1);
+  //   fetchData();
 
-    setActiveNext(!activePrev);
-    setTimeout(() => {
-      setActiveNext(activeNext);
-    }, 1000);
-  };
+  //   setActiveNext(!activePrev);
+  //   setTimeout(() => {
+  //     setActiveNext(activeNext);
+  //   }, 1000);
+  // };
 
-  const prevPage = () => {
-    setPage(page => page - 1);
-    fetchData();
-    setActivePrev(!activePrev);
-    setTimeout(() => {
-        setActivePrev(activePrev);
-    }, 1000);
-  };
+  // const prevPage = () => {
+  //   setPage(page => page - 1);
+  //   fetchData();
+  //   setActivePrev(!activePrev);
+  //   setTimeout(() => {
+  //       setActivePrev(activePrev);
+  //   }, 1000);
+  // };
 
   // const [openRepo, setOpenRepo] = useState(false)
   // const isOpen = () => {
@@ -172,15 +211,12 @@ export default function RepositoriesList() {
                 })
                }
             </ErrorBoundary>
-            <div className="buttonsWrap">
-                <button className={`btnDisabled ${activePrev ? 'btnActive' : '' }`} onClick={prevPage}>
-                    <FcPrevious className={`arrowDisabled ${activePrev ? 'arrowActive' : '' }`} />
-                    Previous
-                </button>
-                <button className={`btnDisabled ${activeNext ? 'btnActive' : '' }`} onClick={nextPage}>
-                    Next
-                    <FcNext className={`arrowDisabled ${activeNext ? 'arrowActive' : '' }`} />
-                </button>
+
+            {/* Pagination */}
+            <div className="pagination">
+                <ul className="pageNumbers">
+                    {showPageNumbers}
+                </ul>
             </div>
           </div>
         </div>

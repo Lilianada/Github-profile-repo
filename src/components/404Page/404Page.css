@@ -1,43 +1,54 @@
 .errorWrapper {
-    display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 100vh;
-      width: 100vw;
-      color: #000;
-      background-color: #fff;
-      font-family: 'Inter', sans-serif;
-  }
-  
-.errorImage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  color: #000;
+  background-color: #fff;
+  font-family: "Inter", sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  .errorImage {
     width: 70%;
     height: 70%;
+  }
 }
 
-.errorBody{
-    margin-top: 1rem;
-    text-align: center;
+.errorBody {
+    height: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
 }
 
-.errorHead{
-    font-size: var(--font-thirtyTwo);
-    margin-bottom: 1rem;
-    color: var(--bodyBg-color);
+.errorHead {
+  font-size: var(--font-thirtyTwo);
+  margin-bottom: 1rem;
+  color: var(--bodyBg-color);
+  text-align: center;
 }
 
-.errorButton{
-    width: 9rem;
-    height: 2.5rem;
-    font-size: var(--font-twenty);
-    border: none;
-    border-radius: 10px;
-    outline: none;
-    background-color: #fff;
-    color: #3e2c9a;
-    cursor: pointer;
-    transition: all .5s;
+.errorButton {
+  width: 9rem;
+  height: 2.5rem;
+  font-size: var(--font-twenty);
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background-color: #fff;
+  color: var(--headerTxt-color);
+  background-color: var(--blueTxt-color);
+  padding: .5rem .75rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
 }
 
-.errorButton:hover{
- transform: scale(.95, .95);
+.errorButton:hover {
+  transform: scale(0.95, 0.95);
 }
