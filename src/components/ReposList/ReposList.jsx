@@ -29,7 +29,6 @@ export default function RepositoriesList() {
       .then((response) => {
         setLoading(true);
         setProfile(response.data);
-        console.log(response.data);
       })
       .catch((err) => {
         setLoading(true);
@@ -49,7 +48,7 @@ export default function RepositoriesList() {
     const url = `https://api.github.com/users/lilianada/repos`;
     setLoading(true);
     axios
-      .get(url)
+      .get(url + "?page={1}+page={2}")
       .then((response) => {
         setData(response.data);
         console.log(response.data);
@@ -115,7 +114,7 @@ export default function RepositoriesList() {
   const handlePrevBtn = () => {
     setCurrentPage(currentPage - 1);
     //if current page -1 is 0 then set maxPageNum and minPageNum to 9 and 0 respectively.
-    if ((currentPage - 1) % pageItems == 0) {
+    if ((currentPage - 1) % pageItems === 0) {
       setMaxPageNum(maxPageNum - pageItems);
       setMinPageNum(minPageNum - pageItems);
     }
@@ -142,7 +141,8 @@ export default function RepositoriesList() {
                 <li>
                   <button
                     onClick={handlePrevBtn}
-                    disabled={currentPage == pages[0] ? true : false}
+                    disabled={currentPage === pages[0] ? true : false}
+                    className={currentPage !==  pages[0] ? "active" : null}
                   >
                     Prev
                   </button>
@@ -152,8 +152,8 @@ export default function RepositoriesList() {
                   <button
                     onClick={handleNextBtn}
                     disabled={
-                      currentPage == pages[pages.length - 1] ? true : false
-                    }
+                      currentPage === pages[pages.length - 1] ? true : false}
+                      className={currentPage !==  pages.length ? "active" : null}
                   >
                     Next
                   </button>
