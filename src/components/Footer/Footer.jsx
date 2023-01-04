@@ -5,10 +5,10 @@ import "./Footer.css";
 export default function Footer() {
   return (
     <footer className="footerSection">
-        <div className="logoContainer">
-            <BsGithub size={24} fill='#a9abac' />
-            <p className="smallTxt">© 2023 GitHub, Inc.</p>
-        </div>
+      <div className="logoContainer">
+        <BsGithub size={24} fill="#a9abac" />
+        <p className="smallTxt">© 2023 GitHub, Inc.</p>
+      </div>
       <ul className="footerList">
         <li className="footerItem">
           <a
@@ -36,7 +36,7 @@ export default function Footer() {
           >
             Security
           </a>
-        </li> 
+        </li>
         <li className="footerItem">
           <a
             className="footerLink"
@@ -57,9 +57,8 @@ export default function Footer() {
         </li>
         <li className="footerItem">
           <a
-            class="Link--secondary"
-            
-                className="footerLink"data-ga-click="Footer, go to contact, text:contact"
+            className="footerLink"
+            data-ga-click="Footer, go to contact, text:contact"
             href="https://support.github.com/?tags=dotcom-footer"
           >
             Contact GitHub

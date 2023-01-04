@@ -1,5 +1,9 @@
+.bodyContent{
+    margin-top: 1rem;
+}
 .headSpace{
     margin: 1rem;
+    margin-bottom: 2rem;
 }
 
 .backBtn{
