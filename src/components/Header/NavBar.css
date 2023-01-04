@@ -218,6 +218,7 @@
 
   .navLink {
     font-size: var(--font-twelve);
+    color: var(--headerTxt-color);
     font-weight: 400;
   }
 

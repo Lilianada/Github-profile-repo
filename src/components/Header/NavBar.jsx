@@ -16,7 +16,7 @@ export default function Header () {
                     <ul className="navItems">
                         <li className="navList"> <Link smooth="true" to="/" className="mobileLogo"><BsGithub size={30} fill='#F0F6FC' /></Link></li>
                         <li className="navList">
-                            <div className="Link"> 
+                            <div className="navLink"> 
                                 <div className='inputBox'>
                                     <input
                                         className='input'
@@ -27,10 +27,10 @@ export default function Header () {
                                     <div className='box'><p style={{fontSize: "10px", lineHeight: "13px"}}>/</p></div>
                                 </div> 
                             </div></li>
-                        <li className="navList"><a className="Link" href="https://lilydesigned.vercel.app/" target="_blank" rel="noreferrer" >Portfolio</a></li>
-                        <li className="navList"><Link smooth="true" to="/who-we-are" className="Link">Error</Link></li>
-                        <li className="navList"><Link smooth="true" to="/contact" className="Link">404Page</Link></li>
-                        <li className="navList"><Link smooth="true" to="/Login" className="Link">Login</Link></li>
+                        <li className="navList"><a className="navLink" href="https://lilydesigned.vercel.app/" target="_blank" rel="noreferrer" >Portfolio</a></li>
+                        <li className="navList"><Link smooth="true" to="/who-we-are" className="navLink">Error</Link></li>
+                        <li className="navList"><Link smooth="true" to="/contact" className="navLink">404Page</Link></li>
+                        <li className="navList"><Link smooth="true" to="/Login" className="navLink">Login</Link></li>
                     </ul>
                 </div>
                 <div className='rightList'>

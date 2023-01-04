@@ -8,12 +8,28 @@
 
 .logoContainer{
     display: flex;
+    align-items: center;
+}
+
+.smallTxt{
+    font-size: 12px;
+    color: #586069;
+    margin-left: 0.5rem;
 }
 
 .footerList{
-
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 1rem;
 }
 
 .footerItem{
-    
+    padding: .5rem;
+}
+
+.footerLink{
+    color: var(--blueTxt-color);
+    font-size: var(--font-twelve);
+    font-weight: 400;
 }
