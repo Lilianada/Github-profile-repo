@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../Footer/Footer";
 import Header from "../Header/NavBar";
 import './RepoPage.css';
 
@@ -36,6 +37,7 @@ export default function RepositoryPage() {
             </div>
         </div>
       </div>
+      <Footer/>
     </main>
   );
 }

@@ -1,11 +1,12 @@
 import React from "react";
+import { BsGithub } from "react-icons/bs";
 import "./Footer.css";
 
 export default function Footer() {
   return (
-    <footer className="head">
+    <footer className="footerSection">
         <div className="logoContainer">
-            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="github logo" className="logo"/>
+            <BsGithub size={48} fill='#a9abac' />
             <p className="smallTxt">© 2023 GitHub, Inc.</p>
         </div>
       <ul className="footerList">

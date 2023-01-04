@@ -1,0 +1,19 @@
+.footerSection{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #30363d;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.logoContainer{
+    display: flex;
+}
+
+.footerList{
+
+}
+
+.footerItem{
+    
+}

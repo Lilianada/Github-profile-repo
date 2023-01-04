@@ -6,6 +6,7 @@ import RepoCard from "./RepoCard";
 import RepoProfile from "./RepoProfile";
 import RepoHead from "./RepoHead";
 import "./ReposList.css";
+import Footer from "../Footer/Footer";
 
 export default function RepositoriesList() {
   const [data, setData] = useState([]);
@@ -163,6 +164,7 @@ export default function RepositoriesList() {
           </div>
         </div>
       </div>
+      <Footer/>
     </main>
   );
 }

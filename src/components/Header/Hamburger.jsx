@@ -10,7 +10,6 @@ import { NavLink } from 'react-router-dom';
 
 export default function Hamburger (){
     const [toggle, setToggle] = useState(false);
-
     // close the mobilemenu when a mobile link is clicked
     const CloseMenu = () => setToggle(false);
 
