@@ -121,17 +121,6 @@ export default function RepositoriesList() {
                 item={item} 
                 profile={profile} 
                 key={item.id} 
-                // name= {item.name}
-                // description={item.description}
-                // language={item.language}
-                // forks={item.forks}
-                // stars={item.stargazers_count}
-                // watchers={item.watchers}
-                // url={item.html_url}
-                // updated={item.updated_at}
-                // clone={item.clone_url}
-                // visibility={item.private}
-                // issues={item.open_issues}
                 />);
               })}
             </ErrorBoundary>

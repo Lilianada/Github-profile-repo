@@ -1,4 +1,5 @@
-import { useContext } from "react";
+import axios from "axios";
+import React, { useEffect, useContext, useState } from "react";
 
 export const DataContext = React.createContext();
 
@@ -8,7 +9,8 @@ const DataProvider = (props) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("https://api.github.com/users/lilianada/repos");
+    const url = "https://api.github.com/users/lilianada/repos";
+    fetch(url);
     setLoading(true);
     axios
       .get(url + "?page={1}+page={2}")
@@ -29,13 +31,12 @@ const DataProvider = (props) => {
   );
 };
 
-
 export const useDataContext = () => {
-    const context = useContext(DataContext);
-    if (!context) {
-        throw new Error("useData must be used within a DataContext");
-    }
-    return context;
+  const context = useContext(DataContext);
+  if (!context) {
+    throw new Error("useData must be used within a DataContext");
+  }
+  return context;
 };
 
 export default DataProvider;

@@ -12,7 +12,6 @@ export default function RepositoryPage(props) {
     language,
     stargazers_count,
     forks,
-    watchers,
     html_url,
     updated_at,
     clone_url,
@@ -30,16 +29,16 @@ export default function RepositoryPage(props) {
         </div>
         <div className="repoInfo">
             <h1 className="repoName">{name}</h1> 
-            <p className="repoDesc">{item.description}</p>
+            <p className="repoDesc">{description}</p>
             <div className="repoDetails"> 
-              {/* <p className="name">Visibility: <span className="res"> {item.visibility}</span></p> */}
-              {/* <p className="name">Last Updated: <span className="res">{item.updated_at} </span></p> */}
-              {/* <p className="name">Language: <span className="res">{item.language}</span></p> */}
-              {/* <p className="name">Forks: <span className="res"> {item.forks} </span></p> */}
-              {/* <p className="name">Stars: <span className="res"> {item.stargazer_count} </span></p> */}
-              {/* <p className="name">Open Issues: <span className="res"> {item.open_issues} </span></p> */}
-              {/* <p className="name">Clone URL: <span className="res"> {item.clone_url}</span></p> */}
-              {/* <a href={item.html_url} className="viewRepo">View on Github</a> */}
+              <p className="name">Visibility: <span className="res"> {visibility}</span></p>
+              <p className="name">Last Updated: <span className="res">{updated_at} </span></p>
+              <p className="name">Language: <span className="res">{language}</span></p>
+              <p className="name">Forks: <span className="res"> {forks} </span></p>
+              <p className="name">Stars: <span className="res"> {stargazers_count} </span></p>
+              <p className="name">Open Issues: <span className="res"> {open_issues} </span></p>
+              <p className="name">Clone URL: <span className="res"> {clone_url}</span></p>
+              <a href={html_url} className="viewRepo">View on Github</a>
             </div>
         </div>
       </div>
