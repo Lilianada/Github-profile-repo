@@ -7,6 +7,7 @@ import Data from './pages/Data';
 import Error from './pages/Error';
 import Login from './components/Authentication/Login';
 import Signup from './components/Authentication/Signup';
+import ErrorPage from './components/404Page/404Page';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,8 +16,8 @@ root.render(
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<App/>} />
+            <Route path='*' element={<ErrorPage/>} />
             <Route path='/repository' element={<Data/>} />
-            <Route path='*' element={<Error/>} />
             <Route path='/error' element={<Error/>} />
             <Route path='/login' element={<Login/>} />
             <Route path='/signup' element={<Signup/>} />

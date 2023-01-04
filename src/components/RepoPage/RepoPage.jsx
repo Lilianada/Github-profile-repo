@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import Header from "../Header/NavBar";
 import './RepoPage.css';
@@ -19,8 +20,9 @@ export default function RepositoryPage() {
       <Header/>
       <div className="bodyContent">
         <div className="headSpace">
-          <button className="backBtn">
-            Back to Repos</button>
+          <Link className="backBtn" to="/" >
+            Back to Repos
+          </Link>
         </div>
         <div className="repoInfo">
             <h1 className="repoName">Repo Name</h1>

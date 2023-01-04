@@ -28,9 +28,9 @@ export default function Header () {
                                 </div> 
                             </div></li>
                         <li className="navList"><a className="navLink" href="https://lilydesigned.vercel.app/" target="_blank" rel="noreferrer" >Portfolio</a></li>
-                        <li className="navList"><Link smooth="true" to="/who-we-are" className="navLink">Error</Link></li>
-                        <li className="navList"><Link smooth="true" to="/contact" className="navLink">404Page</Link></li>
-                        <li className="navList"><Link smooth="true" to="/Login" className="navLink">Login</Link></li>
+                        <li className="navList"><Link smooth="true" to="/error" className="navLink">Error</Link></li>
+                        <li className="navList"><Link smooth="true" to="*" className="navLink">404Page</Link></li>
+                        <li className="navList"><Link smooth="true" to="/login" className="navLink">Login</Link></li>
                     </ul>
                 </div>
                 <div className='rightList'>

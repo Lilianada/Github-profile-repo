@@ -124,6 +124,11 @@ export default function RepositoriesList() {
   return (
     <main className="mainWrapper">
       <Header />
+      {loading ? (
+        <div className="loader-container">
+      	  <div className="spinner"></div>
+        </div>
+      ) : (
       <div className="bodyContent">
         <RepoHead profile={profile} />
         <div className="content">
@@ -164,6 +169,7 @@ export default function RepositoriesList() {
           </div>
         </div>
       </div>
+      )}
       <Footer/>
     </main>
   );

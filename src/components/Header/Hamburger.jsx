@@ -72,7 +72,7 @@ export default function Hamburger() {
             </li>
             <li className="navList" onClick={CloseMenu}>
               {" "}
-              <Link smooth="true" to="/404page" className="navLink">
+              <Link smooth="true" to="*" className="navLink">
                 404Page
               </Link>
             </li>
