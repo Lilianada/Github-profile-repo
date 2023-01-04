@@ -38,7 +38,7 @@ export default function Hamburger() {
                 <BsGithub size={24} fill="#F0F6FC" />
               </Link>
             </li>
-            <li className="navList" onClick={CloseMenu}>
+            <li className="navList">
               <div className="navLink">
                 <div className="inputBox">
                   <input

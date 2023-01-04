@@ -161,6 +161,7 @@
 .navLink {
   color: var(--headerTxt-color);
   font-family: var(--font);
+  font-weight: 600;
 }
 
 .mobileDisplay .navLink:hover,
@@ -218,8 +219,6 @@
 
   .navLink {
     font-size: var(--font-twelve);
-    color: var(--headerTxt-color);
-    font-weight: 600;
   }
 
   .desktopDisplay .navLink:hover,
