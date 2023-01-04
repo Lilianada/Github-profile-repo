@@ -16,7 +16,7 @@ export default function RepositoryPage() {
   return (
     <main className="mainWrapper">
       <Header/>
-      <div className="wrapper">
+      <div className="bodyContent">
         <div className="headSpace">
           <button className="backBtn">
             Back to Repos</button>
