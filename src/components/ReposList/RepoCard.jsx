@@ -6,6 +6,8 @@ import RepositoryPage from "../RepoPage/RepoPage";
 import "./ReposList.css";
 
 export default function RepoCard({ item }) {
+    const id = item.id;
+    
   return (
     <ErrorBoundary>
         <div className="card" key={item.id}>
@@ -27,11 +29,10 @@ export default function RepoCard({ item }) {
             <p>{item.stargazers_count}</p>
             </div>
         </div>
-        <Link to="/repository" className="viewRepo" item={item} >
+        <Link to={"/repository/" + id} className="viewRepo" item={item} >
             View Repo
         </Link>
         </div>
-        <div style={{display: "none"}}><RepositoryPage item={item} /></div>
     </ErrorBoundary>
   );
 }

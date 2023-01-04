@@ -4,16 +4,20 @@ import Footer from "../Footer/Footer";
 import Header from "../Header/NavBar";
 import './RepoPage.css';
 
-export default function RepositoryPage({ item }) {
-  
-  // const { attorneys } =  ();
-  // const getRepo = (id) => {
-  //   const filtered = repos.filter(
-  //     (repo) => parseInt(repo.id) === parseInt(id)
-  //   );
-  //   return filtered[0];
-  // };
-  // return { getRepo };
+export default function RepositoryPage(props) {
+  const{
+    name, 
+    description,
+    visibility,
+    language,
+    stargazers_count,
+    forks,
+    watchers,
+    html_url,
+    updated_at,
+    clone_url,
+    open_issues
+  } = props;
   
   return (
     <main className="mainWrapper">
@@ -25,8 +29,8 @@ export default function RepositoryPage({ item }) {
           </Link>
         </div>
         <div className="repoInfo">
-            <h1 className="repoName">name</h1>
-            {/* <p className="repoDesc">{item.description}</p> */}
+            <h1 className="repoName">{name}</h1> 
+            <p className="repoDesc">{item.description}</p>
             <div className="repoDetails"> 
               {/* <p className="name">Visibility: <span className="res"> {item.visibility}</span></p> */}
               {/* <p className="name">Last Updated: <span className="res">{item.updated_at} </span></p> */}

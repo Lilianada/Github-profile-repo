@@ -40,31 +40,10 @@ export default function RepositoriesList() {
       });
   };
 
-  if (loading) {
-    <h3>Loading...</h3>;
-  }
-
   //Fetch my repositories
-  const fetchData = () => {
-    const url = `https://api.github.com/users/lilianada/repos`;
-    setLoading(true);
-    axios
-      .get(url + "?page={1}+page={2}")
-      .then((response) => {
-        setData(response.data);
-        console.log(response.data);
-      })
-      .catch((err) => {
-        setError(err);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  };
-
+  
   useEffect(() => {
     fetchProfile();
-    fetchData();
   }, []);
 
   // Get current items

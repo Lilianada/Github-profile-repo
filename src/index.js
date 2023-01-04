@@ -8,21 +8,24 @@ import Error from './pages/Error';
 import Login from './components/Authentication/Login';
 import Signup from './components/Authentication/Signup';
 import ErrorPage from './components/404Page/404Page';
+import DataProvider from './components/DataContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <HelmetProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<App/>} />
-            <Route path='*' element={<ErrorPage/>} />
-            <Route path='/repository/:id' element={<Data/>} />
-            <Route path='/error' element={<Error/>} />
-            <Route path='/login' element={<Login/>} />
-            <Route path='/signup' element={<Signup/>} />
-        </Routes>
-      </BrowserRouter>
+      <DataProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<App/>} />
+              <Route path='*' element={<ErrorPage/>} />
+              <Route path='/repository/:id' element={<Data/>} />
+              <Route path='/error' element={<Error/>} />
+              <Route path='/login' element={<Login/>} />
+              <Route path='/signup' element={<Signup/>} />
+          </Routes>
+        </BrowserRouter>
+      </DataProvider>
     </HelmetProvider>
   </React.StrictMode>
 );
