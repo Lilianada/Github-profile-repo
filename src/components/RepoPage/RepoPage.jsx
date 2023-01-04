@@ -1,6 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
-import { MdArrowBackIos } from "react-icons/md";
 import Header from "../Header/NavBar";
 import './RepoPage.css';
 
@@ -17,10 +15,6 @@ export default function RepositoryPage() {
   
   return (
     <main className="mainWrapper">
-      <Helmet>
-        <title>Repository Page</title>
-        <meta name="description" content="Data for a single repository" />
-      </Helmet>
       <Header/>
       <div className="wrapper">
         <div className="headSpace">

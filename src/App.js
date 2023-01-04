@@ -1,9 +1,9 @@
 import './App.css';
-import RepositoriesList from './components/ReposList/ReposList';
+import Home from './pages/Home';
 
 function App() {
   return (
-      <RepositoriesList/>
+      <Home/>
   );
 }
 
