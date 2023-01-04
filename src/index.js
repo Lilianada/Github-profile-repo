@@ -17,6 +17,7 @@ root.render(
           <Route path="/" element={App} />
             <Route path='/repository' element={Data} />
             <Route path='*' element={Error} />
+            <Route path='/error' element={Error} />
             <Route path='/login' element={Login} />
             <Route path='/signup' element={Signup} />
         </Routes>
