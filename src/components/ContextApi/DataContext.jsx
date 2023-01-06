@@ -17,7 +17,6 @@ const DataProvider = (props) => {
       .get(url + "?page={1}+page={2}")
       .then((response) => {
         setData(response.data);
-        console.log(response.data);
       })
       .catch((err) => {
         setError(err);

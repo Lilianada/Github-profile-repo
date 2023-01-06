@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 import "./Counter.css";
 
 export default function Counter() {
@@ -9,12 +10,14 @@ export default function Counter() {
 
   return (
     <section className="counterApp">
-        <h1>Counter</h1>
-        <div className="counter">
-            <button className="counter__button" onClick={decrement} >-</button>
-            <span className="counter__value">0</span>
-            <button className="counter__button" onClick={increment} >+</button>
-        </div>
+        <ErrorBoundary>
+            <div className="counter">
+                <h1>Counter App</h1>
+                <button className="counterButton" onClick={decrement} >-</button>
+                <span className="counterValue"> {count} </span>
+                <button className="counterButton" onClick={increment} >+</button>
+            </div>
+        </ErrorBoundary>
     </section>
   );
 }
