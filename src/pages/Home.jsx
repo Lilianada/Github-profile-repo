@@ -1,12 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { useParams } from "react-router-dom";
 import RepositoriesList from "../components/ReposList/ReposList";
-import UseData from "../components/ContextApi/UseData";
 
 export default function Home() {
-  let { id } = useParams();
-  let { getData } = UseData();
+ 
   return (
     <>
       <Helmet>
@@ -17,7 +14,7 @@ export default function Home() {
         />
         <link rel="canonical" href="/" />
       </Helmet>
-      <RepositoriesList {...getData(id)} />
+      <RepositoriesList  />
     </>
   );
 }

@@ -33,6 +33,7 @@
 .repoInfo .repoDesc{
     font-size: 16px;
     margin-top: .75rem;
+    margin-bottom: .75rem;
 }
 
 .repoInfo .name{

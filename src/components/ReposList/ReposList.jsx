@@ -32,7 +32,7 @@ export default function RepositoriesList() {
       });
   }, []);
 
-  const { data, setData } = useDataContext(DataContext);
+  const { data } = useDataContext(DataContext);
 
   return (
     <main className="mainWrapper">
