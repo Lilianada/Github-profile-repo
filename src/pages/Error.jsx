@@ -10,7 +10,9 @@ export default function Error() {
         <link rel="canonical" href="/error" />
       </Helmet>
         <section className="showError">
-            <div className="ReactCounter"></div>
+            <div className="ReactCounter">
+              
+            </div>
         </section>
     </>
   );
