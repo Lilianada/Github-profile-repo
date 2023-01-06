@@ -19,7 +19,7 @@ export default function RepositoryPage(props) {
   } = props;
   
   return (
-    <main className="mainWrapper">
+    <main className="mainWrapper repoPage">
       <Header/>
       <div className="bodyContent">
         <div className="headSpace">

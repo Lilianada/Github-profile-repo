@@ -21,7 +21,7 @@ root.render(
               <Route path='*' element={<ErrorPage/>} />
               <Route path='/repository/:id' element={<Data/>} />
               <Route path='/error' element={<Error/>} />
-              <Route path='/login' element={<Login/>} />
+              <Route path='/login' element={<Login/>} /> 
               <Route path='/signup' element={<Signup/>} />
           </Routes>
         </BrowserRouter>

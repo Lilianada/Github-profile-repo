@@ -5,7 +5,6 @@
   width: 95%;
   border-top: 1px solid #30363d;
   margin: 1rem auto;
-  margin-top: 2rem;
   padding-top: 1rem;
 }
 
@@ -58,9 +57,9 @@
   }
 }
 
-@media screen and (min-height: 800px) {
+/* @media screen and (max-height: 800px) {
   .footerSection {
     position: absolute;
     bottom: 0;
   }
-}
+} */

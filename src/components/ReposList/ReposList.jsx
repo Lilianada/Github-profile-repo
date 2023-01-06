@@ -7,8 +7,7 @@ import RepoProfile from "./RepoProfile";
 import RepoHead from "./RepoHead";
 import "./ReposList.css";
 import Footer from "../Footer/Footer";
-import { useParams } from "react-router-dom";
-import UseData from "../ContextApi/UseData";
+import { DataContext, useDataContext } from "../ContextApi/DataContext";
 
 export default function RepositoriesList() {
   const [error, setError] = useState("");
@@ -33,9 +32,7 @@ export default function RepositoriesList() {
       });
   }, []);
 
-  let { id } = useParams();
-  let { getData } = UseData();
-  console.log(getData()); // This is the data from the context api but it says undefined
+  const { data, setData } = useDataContext(DataContext);
 
   return (
     <main className="mainWrapper">
@@ -49,9 +46,8 @@ export default function RepositoriesList() {
           <RepoHead profile={profile} />
           <div className="content">
             <RepoProfile profile={profile} />
-
             <div className="cards">
-              <RepoCard profile={profile} {...getData(id)} />
+              <RepoCard profile={profile} data={data} />
             </div>
           </div>
         </div>

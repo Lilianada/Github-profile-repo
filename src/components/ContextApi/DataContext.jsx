@@ -26,7 +26,7 @@ const DataProvider = (props) => {
       });
   }, []);
   return (
-    <DataContext.Provider value={{ data, loading, error }}>
+    <DataContext.Provider value={{ data, loading, error, setData }}>
       {props.children}
     </DataContext.Provider>
   );

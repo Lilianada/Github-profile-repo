@@ -4,11 +4,7 @@ import { Link } from "react-router-dom";
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 import "./ReposList.css";
 
-export default function RepoCard(props) {
-  const {
-    id,
-    data
-  } = props;
+export default function RepoCard({ data }) {
 
   // stores current page number, initially 1
   const [currentPage, setCurrentPage] = useState(1);
@@ -97,7 +93,7 @@ export default function RepoCard(props) {
                 <p>{item.stargazers_count}</p>
               </div>
             </div>
-            <Link to={"/repository/" + id} className="viewRepo">
+            <Link to={"/repository/" + item.id} className="viewRepo">
               View Repo
             </Link>
           </div>

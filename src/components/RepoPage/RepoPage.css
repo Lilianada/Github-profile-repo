@@ -44,3 +44,8 @@
 .repoInfo .res{
     color: var(--headTxt-color);
 }
+
+.repoPage footer{
+    position: absolute;
+    bottom: 0;
+}
