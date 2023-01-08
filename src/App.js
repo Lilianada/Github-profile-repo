@@ -1,5 +1,5 @@
 import './App.css';
-import DataProvider from './components/ContextApi/DataContext';
+import DataProvider from './useContext/DataContext';
 import Home from './pages/Home';
 
 function App() {

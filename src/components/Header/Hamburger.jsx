@@ -78,9 +78,14 @@ export default function Hamburger() {
             </li>
             <li className="navList" onClick={CloseMenu}>
               {" "}
-              <Link smooth="true" to="/doc" className="navLink">
+              <a 
+                className="navLink" 
+                href="/" 
+                target="_blank" 
+                rel="noreferrer"
+              >
                 Doc
-              </Link>
+              </a>
             </li>
             <li className="navList" onClick={CloseMenu}>
               {" "}

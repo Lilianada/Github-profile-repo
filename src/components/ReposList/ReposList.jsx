@@ -7,7 +7,7 @@ import RepoProfile from "./RepoProfile";
 import RepoHead from "./RepoHead";
 import "./ReposList.css";
 import Footer from "../Footer/Footer";
-import { DataContext, useDataContext } from "../ContextApi/DataContext";
+import { DataContext, useDataContext } from "../../useContext/DataContext";
 
 export default function RepositoriesList() {
   const [error, setError] = useState("");
