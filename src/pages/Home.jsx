@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import RepositoriesList from "../components/ReposList/ReposList";
+import RepositoriesList from "../components/RepoList/RepoList";
 
 export default function Home() {
  

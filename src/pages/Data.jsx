@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { useParams } from "react-router-dom";
 import UseData from "../useContext/UseData";
-import RepositoryPage from "../components/RepoPage/RepoPage";
+import RepositoryData from "../components/RepoData/RepoData";
 
 export default function Data() {
   let { id } = useParams();
@@ -12,6 +12,6 @@ export default function Data() {
         <title>Repository Page</title>
         <meta name="description" content="Data for a single repository" />
       </Helmet>
-      <RepositoryPage {...getData(id)}/>
+      <RepositoryData {...getData(id)}/>
   </>;
 }

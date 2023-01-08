@@ -1,0 +1,52 @@
+.bodyContent{
+    margin-top: 1rem;
+}
+.headSpace{
+    margin: 1rem;
+    margin-bottom: 2rem;
+}
+
+.backBtn{
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid var(--headerTxt-color);
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--headerTxt-color);
+    font-size: var(--font-sixteen);
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.repoInfo{
+    margin: 1rem;
+}
+
+.repoInfo .repoName{
+    font-size: 32px;
+    color: var(--blueTxt-color);
+    margin-bottom: .5rem;
+}
+
+.repoInfo .repoDesc{
+    font-size: 16px;
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+}
+
+.repoInfo .name{
+    font-size: var(--font-fourteen);
+    color: var(--bodyTxt-color);
+    margin-bottom: 1rem;
+}
+
+.repoInfo .res{
+    color: var(--headTxt-color);
+}
+
+.repoPage footer{
+    position: absolute;
+    bottom: 0;
+}
