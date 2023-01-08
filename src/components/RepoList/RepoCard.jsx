@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { IoIosStarOutline } from "react-icons/io";
 import { Link } from "react-router-dom";
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
-import "./ReposList.css";
+import "./RepoList.css";
 
 export default function RepoCard({ data }) {
 

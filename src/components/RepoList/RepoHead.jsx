@@ -4,7 +4,7 @@ import { GoRepo } from "react-icons/go";
 import { FiPackage } from "react-icons/fi";
 import { AiOutlineLayout } from "react-icons/ai";
 import { IoIosStarOutline } from "react-icons/io";
-import "./ReposList.css";
+import "./RepoList.css";
 
 export default function RepoHead({profile}) {
   return (

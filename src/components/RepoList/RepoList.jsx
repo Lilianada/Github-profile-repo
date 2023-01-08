@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Header from "../Header/NavBar";
 import axios from "axios";
-import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 import RepoCard from "./RepoCard";
 import RepoProfile from "./RepoProfile";
 import RepoHead from "./RepoHead";
-import "./ReposList.css";
 import Footer from "../Footer/Footer";
 import { DataContext, useDataContext } from "../../useContext/DataContext";
+import "./RepoList.css";
 
 export default function RepositoriesList() {
   const [error, setError] = useState("");
@@ -15,7 +14,7 @@ export default function RepositoriesList() {
   const [profile, setProfile] = useState([]);
 
   // Fetch my github profile
-  useEffect(() => {
+  const fetchData = async () => {
     const url = "https://api.github.com/users/lilianada";
     axios
       .get(url)
@@ -30,6 +29,10 @@ export default function RepositoriesList() {
       .finally(() => {
         setLoading(false);
       });
+  };
+  
+  useEffect(() => {
+    fetchData();
   }, []);
 
   const { data } = useDataContext(DataContext);
@@ -37,11 +40,6 @@ export default function RepositoriesList() {
   return (
     <main className="mainWrapper">
       <Header />
-      {loading ? (
-        <div className="loader-container">
-          <div className="spinner"></div>
-        </div>
-      ) : (
         <div className="bodyContent">
           <RepoHead profile={profile} />
           <div className="content">
@@ -51,7 +49,6 @@ export default function RepositoriesList() {
             </div>
           </div>
         </div>
-      )}
       <Footer />
     </main>
   );
