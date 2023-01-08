@@ -78,6 +78,12 @@ export default function Hamburger() {
             </li>
             <li className="navList" onClick={CloseMenu}>
               {" "}
+              <Link smooth="true" to="/doc" className="navLink">
+                Doc
+              </Link>
+            </li>
+            <li className="navList" onClick={CloseMenu}>
+              {" "}
               <Link smooth="true" to="/login" className="navLink">
                 Login
               </Link>

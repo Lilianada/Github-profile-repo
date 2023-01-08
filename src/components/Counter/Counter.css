@@ -38,3 +38,9 @@
     font-weight: 600;
     margin: 1rem;
 }
+
+
+.counterApp footer{
+    position: absolute;
+    bottom: 0;
+}
