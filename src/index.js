@@ -8,7 +8,7 @@ import Error from './pages/Error';
 import Login from './components/Authentication/Login';
 import Signup from './components/Authentication/Signup';
 import ErrorPage from './components/404Page/404Page';
-import DataProvider from './useContext/DataContext';
+import DataProvider from './components/ContextApi/DataContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
