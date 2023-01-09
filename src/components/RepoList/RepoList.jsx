@@ -45,7 +45,7 @@ export default function RepositoriesList() {
           <div className="content">
             <RepoProfile profile={profile} />
             <div className="cards">
-              <RepoCard profile={profile} data={data} />
+              <RepoCard data={data} />
             </div>
           </div>
         </div>

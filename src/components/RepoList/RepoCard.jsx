@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { IoIosStarOutline } from "react-icons/io";
 import { Link } from "react-router-dom";
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
+import Pagination from "./Pagination";
 import "./RepoList.css";
 
 export default function RepoCard({ data }) {
@@ -24,6 +25,7 @@ export default function RepoCard({ data }) {
   for (let i = 1; i <= Math.ceil(data.length / pageItems); i++) {
     pages.push(i);
   }
+
   // onclick handler for the buttons
   const handleClick = (event) => {
     setCurrentPage(Number(event.target.id));
@@ -99,30 +101,15 @@ export default function RepoCard({ data }) {
           </div>
         );
       })}
+
       {/* Pagination */}
-      <div className="pagination">
-        <ul className="pageNumbers">
-          <li>
-            <button
-              onClick={handlePrevBtn}
-              disabled={currentPage === pages[0] ? true : false}
-              className={currentPage !== pages[0] ? "active" : null}
-            >
-              Prev
-            </button>
-          </li>
-          {showPageNumbers}
-          <li>
-            <button
-              onClick={handleNextBtn}
-              disabled={currentPage === pages[pages.length - 1] ? true : false}
-              className={currentPage !== pages.length ? "active" : null}
-            >
-              Next
-            </button>
-          </li>
-        </ul>
-      </div>
+      <Pagination 
+        handlePrevBtn={handlePrevBtn}
+        handleNextBtn={handleNextBtn}
+        showPageNumbers={showPageNumbers}
+        currentPage={currentPage}
+        pages={pages}
+      />
     </ErrorBoundary>
   );
 }

@@ -8,8 +8,7 @@ const DataProvider = (props) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  
-  useEffect(() => {
+  const fetchData = async () => {
     const url = "https://api.github.com/users/lilianada/repos";
     fetch(url);
     setLoading(true);
@@ -24,6 +23,10 @@ const DataProvider = (props) => {
       .finally(() => {
         setLoading(false);
       });
+  };
+
+  useEffect(() => {
+   fetchData();
   }, []);
 
   return (
