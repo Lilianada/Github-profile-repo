@@ -78,10 +78,10 @@ export default function Hamburger() {
             </li>
             <li className="navList" onClick={CloseMenu}>
               {" "}
-              <a 
-                className="navLink" 
-                href="/" 
-                target="_blank" 
+              <a
+                className="navLink"
+                href="https://theconfusedcreative.medium.com/create-a-react-project-that-consumes-githubs-api-implements-error-boundary-and-proper-seo-cb2646a4db7b"
+                target="_blank"
                 rel="noreferrer"
               >
                 Doc

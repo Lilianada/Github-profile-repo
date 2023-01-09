@@ -11,7 +11,7 @@ const RepoData = lazy(() => import("./pages/Data"));
 const NoMatch = lazy(() => import("./pages/NoMatch"));
 const ErrorBoundary = lazy(() => import("./pages/Error"));
 const Login = lazy(() => import("././components/Authentication/Login"));
-const Signup = lazy(() => import("./components/Authentication/SignuP"));
+const Signup = lazy(() => import("./components/Authentication/Signup"));
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

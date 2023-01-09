@@ -56,7 +56,12 @@ export default function Header() {
               </Link>
             </li>
             <li className="navList">
-              <a className="navLink" href="/" target="_blank" rel="noreferrer">
+              <a
+                className="navLink"
+                href="https://theconfusedcreative.medium.com/create-a-react-project-that-consumes-githubs-api-implements-error-boundary-and-proper-seo-cb2646a4db7b"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Doc
               </a>
             </li>
