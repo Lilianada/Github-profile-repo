@@ -1,2 +1,6 @@
 https://github-repo-display.netlify.app/
 https://github-repo-display.netlify.app/
+https://github-repo-display.netlify.app/error
+https://github-repo-display.netlify.app/login
+https://github-repo-display.netlify.app/signup
+https://github-repo-display.netlify.app/*

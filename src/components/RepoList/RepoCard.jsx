@@ -10,9 +10,9 @@ export default function RepoCard({ data }) {
   // stores current page number, initially 1
   const [currentPage, setCurrentPage] = useState(1);
   // stores no of items we want to display in single page.
-  const [pageItems, setPageItems] = useState(9);
+  const [pageItems, setPageItems] = useState(5);
   // maxPageNum and minPageNum are used to set the limit of page numbers to be displayed on the screen.
-  const [maxPageNum, setMaxPageNum] = useState(9);
+  const [maxPageNum, setMaxPageNum] = useState(5);
   const [minPageNum, setMinPageNum] = useState(0);
 
   // Get current items

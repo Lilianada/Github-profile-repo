@@ -9,7 +9,7 @@ export default function Signup () {
         <main className="mainWrapper">
             <Header/>
             <section className="loginWrapper">
-            <header className="head">
+            <header className="loginHead">
                 <BsGithub size={48} fill='#F0F6FC' />
                 <p>Sign in to Github</p>
             </header>

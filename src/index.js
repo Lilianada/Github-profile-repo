@@ -1,4 +1,4 @@
-import React from "react";
+import React, {lazy, Suspense} from "react";
 import ReactDOM from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -10,21 +10,26 @@ import Signup from "./components/Authentication/Signup";
 import ErrorPage from "./components/404Page/404Page";
 import DataProvider from "./useContext/DataContext";
 
+const Home = lazy(() => import("./App"));
+const RepoData = lazy(() => import("./pages/Data"));
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <HelmetProvider>
       <DataProvider>
+      <Suspense fallback={null}>
         <BrowserRouter>
           <Routes>
-            <Route index element={<App />} />
-            <Route path="/repository/:id" element={<Data />} />
+            <Route index element={<Home />} />
+            <Route path="/repository/:id" element={<RepoData />} />
             <Route path="*" element={<ErrorPage />} />
             <Route path="/error" element={<Error />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
           </Routes>
         </BrowserRouter>
+      </Suspense>
       </DataProvider>
     </HelmetProvider>
   </React.StrictMode>

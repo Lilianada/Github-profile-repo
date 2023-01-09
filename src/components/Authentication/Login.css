@@ -15,11 +15,11 @@
   }
 }
 
-.head {
+.loginHead {
   text-align: center;
 }
 
-.head p {
+.loginHead p {
   font-weight: 200;
   font-size: 1.25rem;
   color: var(--headTxt-color);
