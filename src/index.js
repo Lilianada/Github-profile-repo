@@ -9,6 +9,7 @@ import Login from "./components/Authentication/Login";
 import Signup from "./components/Authentication/Signup";
 import ErrorPage from "./components/404Page/404Page";
 import DataProvider from "./useContext/DataContext";
+import Loader from "./components/Loader/Loader";
 
 const Home = lazy(() => import("./App"));
 const RepoData = lazy(() => import("./pages/Data"));
@@ -18,7 +19,7 @@ root.render(
   <React.StrictMode>
     <HelmetProvider>
       <DataProvider>
-      <Suspense fallback={null}>
+      <Suspense fallback={<Loader/>}>
         <BrowserRouter>
           <Routes>
             <Route index element={<Home />} />
