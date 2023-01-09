@@ -16,7 +16,7 @@ export default function Header() {
           <ul className="navItems">
             <li className="navList">
               {" "}
-              <Link smooth="true" to="/" className="mobileLogo">
+              <Link smooth="true" to="repository" className="mobileLogo">
                 <BsGithub size={30} fill="#F0F6FC" />
               </Link>
             </li>

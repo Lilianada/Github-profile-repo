@@ -34,7 +34,7 @@ export default function Hamburger() {
         <div className={toggle ? "mobileMenu" : "active"}>
           <ul className="navItems">
             <li className="navList">
-              <Link smooth="true" to="/" className="mobileLogo">
+              <Link smooth="true" to="repository" className="mobileLogo">
                 <BsGithub size={24} fill="#F0F6FC" />
               </Link>
             </li>

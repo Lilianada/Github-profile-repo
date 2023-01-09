@@ -21,7 +21,7 @@ export default function RepositoryData(props) {
   return (
     <main className="mainWrapper repoPage">
       <Header/>
-      <div className="bodyContent">
+      <div className="dataContent">
         <div className="headSpace">
           <Link className="backBtn" to="/" >
             Back to Repos

@@ -1,5 +1,6 @@
-.bodyContent{
-    /* margin-top: 1rem; */
+.dataContent{
+    margin: 2rem 1rem 1rem;
+    max-width: 500px;
 }
 
 .headSpace{
@@ -8,7 +9,6 @@
 }
 
 .backBtn{
-    margin: 10px;
     padding: 10px;
     border: 1px solid var(--headerTxt-color);
     border-radius: 5px;
@@ -35,6 +35,8 @@
     font-size: 16px;
     margin-top: .75rem;
     margin-bottom: .75rem;
+    max-height: 100px;
+    overflow: hidden;
 }
 
 .repoInfo .name{
@@ -48,6 +50,21 @@
 }
 
 .repoPage footer{
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    margin: 1rem 2rem;
 }
+
+@media screen and (min-width: 768px) {
+    .dataContent{
+        margin: 1rem 2rem;
+    }
+}
+
+@media screen and (min-height: 601px) {
+   .repoPage footer{
+        position: absolute;
+        bottom: 0;
+        margin: 1rem 0;
+    }
+}
+    
