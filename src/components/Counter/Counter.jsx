@@ -3,42 +3,49 @@ import Footer from "../Footer/Footer";
 import Header from "../Header/NavBar";
 import "./Counter.css";
 
-const ErrorFallback = (props) => {
-    return (
-      <div role="alert" className="boundary__error">
-        <p>Something went wrong!</p>
-        <pre>{props.error.message}</pre>
-        <Button onClick={props.resetErrorBoundary}>Restart app</Button>
-      </div>
-    );
-  };
-
-export default function Counter() {
-  const [count, setCount] = useState(0);
-  const increment = () => {
-    setCount(count + 1);
-    if (count === 4) {
-      throw new Error("Crashed!!");
-    }
-
+class Counter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { counter: 0 };
+    this.handleIncrement = this.handleIncrement.bind(this);
   }
-  const decrement = () => setCount(count - 1);
 
-  return (
-    <section className="counterApp">
-      <Header/>
-        <div className="counter">
-          <h2>Counter App</h2>
-          <button className="counterButton" onClick={decrement}>
-            -
-          </button>
-          <span className="counterValue"> {count} </span>
-          <button className="counterButton" onClick={increment}>
-            +
-          </button>
-        </div>
-      <Footer/>
-    </section>
-  );
+  handleIncrement() {
+    this.setState(({ counter }) => ({
+      counter: counter + 1,
+    }));
+  }
+
+  handleDecrement() {
+    this.setState(({ counter }) => ({
+      counter: counter - 1,
+    }));
+  }
+
+  render() {
+    if (this.state.counter === 5) {
+      // Simulate a JS error
+      throw new Error("I crashed!");
+    }
+    return (
+      <>
+        <Header />
+        <section className="counterApp">
+          <div className="counter">
+            <h1>Counter App</h1>
+            <button className="counterButton" onClick={this.handleDecrement}>
+              -
+            </button>
+            <span className="counterValue"> {this.state.counter} </span>
+            <button className="counterButton" onClick={this.handleIncrement}>
+              +
+            </button>
+          </div>
+        </section>
+        <Footer />
+      </>
+    );
+  }
 }
 
+export default Counter;

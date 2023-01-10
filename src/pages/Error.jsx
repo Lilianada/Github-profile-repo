@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import Counter from "../components/Counter/Counter";
 import ErrorBoundary from "../components/ErrorBoundary/ErrorBoundary";
 
+
 export default function Error() {
   return (
     <>
@@ -14,7 +15,7 @@ export default function Error() {
         />
         <link rel="canonical" href="/error" />
       </Helmet>
-      <ErrorBoundary>
+      <ErrorBoundary >
         <Counter />
       </ErrorBoundary>
     </>
