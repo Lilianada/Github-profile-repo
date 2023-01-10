@@ -1,8 +1,17 @@
 import React, { useState } from "react";
-import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 import Footer from "../Footer/Footer";
 import Header from "../Header/NavBar";
 import "./Counter.css";
+
+const ErrorFallback = (props) => {
+    return (
+      <div role="alert" className="boundary__error">
+        <p>Something went wrong!</p>
+        <pre>{props.error.message}</pre>
+        <Button onClick={props.resetErrorBoundary}>Restart app</Button>
+      </div>
+    );
+  };
 
 export default function Counter() {
   const [count, setCount] = useState(0);
@@ -14,8 +23,6 @@ export default function Counter() {
 
   }
   const decrement = () => setCount(count - 1);
-
-
 
   return (
     <section className="counterApp">
@@ -34,3 +41,4 @@ export default function Counter() {
     </section>
   );
 }
+

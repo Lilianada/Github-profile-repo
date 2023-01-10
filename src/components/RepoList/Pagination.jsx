@@ -1,5 +1,4 @@
 import React from "react";
-import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 import "./RepoList.css";
 
 export default function Pagination({
@@ -10,7 +9,6 @@ export default function Pagination({
   pages,
 }) {
   return (
-    <ErrorBoundary>
       <div className="pagination">
         <ul className="pageNumbers">
           <li>
@@ -34,6 +32,5 @@ export default function Pagination({
           </li>
         </ul>
       </div>
-    </ErrorBoundary>
   );
 }

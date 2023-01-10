@@ -15,7 +15,7 @@ export default function Error() {
         <link rel="canonical" href="/error" />
       </Helmet>
       <ErrorBoundary>
-      <Counter />
+        <Counter />
       </ErrorBoundary>
     </>
   );

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { IoIosStarOutline } from "react-icons/io";
 import { Link } from "react-router-dom";
-import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 import Pagination from "./Pagination";
 import "./RepoList.css";
 
@@ -70,7 +69,7 @@ export default function RepoCard({ data }) {
   };
 
   return (
-    <ErrorBoundary>
+    <>
       {currentItems.map((item) => {
         return (
           <div className="card" key={item.id}>
@@ -110,6 +109,6 @@ export default function RepoCard({ data }) {
         currentPage={currentPage}
         pages={pages}
       />
-    </ErrorBoundary>
+    </>
   );
 }

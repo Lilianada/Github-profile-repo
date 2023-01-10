@@ -35,3 +35,16 @@ class ErrorBoundary extends React.Component {
   }
 
   export default ErrorBoundary;
+
+  
+  
+  // const App = () => {
+  //   const navigate = useNavigate();
+  
+  //   return (
+  //     <ErrorBoundary
+  //       FallbackComponent={ErrorFallback}
+  //       onReset={() => {
+  //         navigate("/");
+  //       }}
+  //     >
